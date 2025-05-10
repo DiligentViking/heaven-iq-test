@@ -7,6 +7,9 @@
 
 body {
   background-image: url("./assets/background-frame.jpg");
+
+  color: white;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,4 +25,38 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+.title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.start-test,
+.how-to {
+
+}
+
+.start-test img,
+.how-to img {
+  margin-right: -5px;  /* image was inherently slightly off-center */
+}
+
+.start-test h2,
+.how-to h2 {
+  text-align: center;
+  margin-top: -10px;  /* the mockup had a distance of 12 px between the bottom of the image and the top of the text */
+}
+
+.how-to {
+  margin-top: 20px;  /* approximations for now */
+  margin-bottom: 60px;
+}
+
+
+.extra-options {
+  display: flex;
+  gap: 60px;
 }
