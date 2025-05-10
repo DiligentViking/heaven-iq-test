@@ -1,0 +1,6 @@
+NOTES
+
+
+-File Tree: I will have all the code files in the main directory. Each page will have a html, css, and js file (e.g. index.html, index.css, index.js).
+
+-Index: This is the name of the main page files.
