@@ -6,3 +6,5 @@ NOTES
 -Index: This is the name of the main page files.
 
 -Image Formats: I notice the images in bruce's site are webp instead of png. Consider looking into that
+
+-Color Picking: For each page I have an html file containing just the mockup image. This is so that I can use the color picker browser extension on the picture. [hm or i could ha just put that picture of the text in and then color picked and compared from there]
