@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'lithospro-light';
+  src:url('./assets/fonts/lithospro-light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'lithospro-regular';  /* for backup */
+    src:url('./assets/fonts/lithospro-webfont.woff2') format('woff2'),
+        url('./assets/fonts/lithospro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -9,6 +25,8 @@ body {
   background-image: url("./assets/background-frame.jpg");
 
   color: white;
+  font-family: 'lithospro-regular', 'lithospro-light', 'Times New Roman', Times, serif;
+  text-shadow: 2px 4px 2px rgb(145, 110, 80);
 
   display: flex;
   justify-content: center;
@@ -29,14 +47,21 @@ body {
 
 
 .title {
+  font-size: 30px;
+
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .start-test,
 .how-to {
-
+  outline: 1px solid darkred;
 }
 
 .start-test img,

@@ -8,3 +8,7 @@ NOTES
 -Image Formats: I notice the images in bruce's site are webp instead of png. Consider looking into that
 
 -Color Picking: For each page I have an html file containing just the mockup image. This is so that I can use the color picker browser extension on the picture. [hm or i could ha just put that picture of the text in and then color picked and compared from there]
+
+-Font Optimizing: it would be good if i can get that otf as a woff/woff2 somehow
+
+-Shadow Difficulties: perhaps it has to do with transparency or opacity?
