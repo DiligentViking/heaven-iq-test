@@ -2,6 +2,7 @@ NOTES
 
 
 -File Tree: I will have all the code files in the main directory. Each page will have a html, css, and js file (e.g. index.html, index.css, index.js).
+-[change] Actually i will have the css and js files in their own folders.
 
 -Index: This is the name of the main page files.
 
@@ -12,3 +13,6 @@ NOTES
 -Font Optimizing: it would be good if i can get that otf as a woff/woff2 somehow
 
 -Shadow Difficulties: perhaps it has to do with transparency or opacity?
+-Shadow Darkness:  having different darkness of shadow for each element.
+
+-Letter Spacing: Consider increasing this.

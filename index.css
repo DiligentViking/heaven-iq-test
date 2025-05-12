@@ -25,8 +25,8 @@ body {
   background-image: url("./assets/background-frame.jpg");
 
   color: white;
-  font-family: 'lithospro-regular', 'lithospro-light', 'Times New Roman', Times, serif;
-  text-shadow: 2px 4px 2px rgb(145, 110, 80);
+  font-family: 'lithospro-light', 'lithospro-regular', 'Times New Roman', Times, serif;
+  text-shadow: 2px 4px 2px rgba(126, 79, 38, 0.6);  /* the bottom text does not look right */
 
   display: flex;
   justify-content: center;
@@ -53,15 +53,35 @@ body {
   margin-bottom: 50px;
 }
 
+.title::before,
+.title::after {
+  position: absolute;  /* so it won't enlargen the title div */
+  top: 50px;
+}
+
+.title::before {
+  content: url("./assets/Main Page/title decoration left.png");
+  margin-left: -60px;  /* i feel like im hacking my way through */
+}
+
+.title::after {
+  content: url("./assets/Main Page/title\ decoration\ right.png");
+}
+
+.iq {
+  font-size: 38px;  /* transform dint work */
+}
+
 
 a {
   text-decoration: none;
   color: white;
 }
 
-.start-test,
+
 .how-to {
-  outline: 1px solid darkred;
+  margin-top: 20px;  /* approximations for now */
+  margin-bottom: 60px;
 }
 
 .start-test img,
@@ -71,17 +91,32 @@ a {
 
 .start-test h2,
 .how-to h2 {
+  font-size: 24px;
   text-align: center;
   margin-top: -10px;  /* the mockup had a distance of 12 px between the bottom of the image and the top of the text */
 }
 
-.how-to {
-  margin-top: 20px;  /* approximations for now */
-  margin-bottom: 60px;
+.start-test img,
+.start-test h2,
+.how-to img,
+.how-to h2 {
+  transition: transform 0.4s ease;
+}
+
+.start-test:hover > img,
+.how-to:hover > img {
+  transform: translate(0, -10px);
+  /* box-shadow: 2px 2px 2px white;  /* won't work because this needs to be a circle */
+}
+
+.start-test:hover > h2,  /* it affects the two children but not the container */
+.how-to:hover > h2{
+  transform: scale(1.05);
 }
 
 
 .extra-options {
   display: flex;
+  justify-content: center;
   gap: 60px;
 }
