@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-  background-image: url("./assets/Main Page/bg1.png");
+  background-image: url("./assets/Main_Page/bg1.png");
   background-size: cover;  /* this worked nicely */
 
   width: 412px;
@@ -60,12 +60,12 @@ body {
 }
 
 .title::before {
-  content: url("./assets/Main Page/title decoration left.png");
+  content: url("./assets/Main_Page/title_decoration_left.png");
   margin-left: -60px;  /* i feel like im hacking my way through */
 }
 
 .title::after {
-  content: url("./assets/Main Page/title\ decoration\ right.png");
+  content: url("./assets/Main_Page/title_decoration_right.png");
 }
 
 .iq {
