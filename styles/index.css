@@ -111,7 +111,7 @@ a {
 
 .start-test:hover > h2,  /* it affects the two children but not the container */
 .how-to:hover > h2{
-  transform: scale(1.05);
+  transform: scale(1.05);  /* you see, changing font size would move everything */
 }
 
 
