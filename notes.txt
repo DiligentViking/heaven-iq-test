@@ -16,3 +16,7 @@ NOTES
 -Shadow Darkness:  having different darkness of shadow for each element.
 
 -Letter Spacing: Consider increasing this.
+
+-Hover Effects: This is rendered obsolete for mobile devices! Consider changing these psuedo-properties to :active or something.
+
+-Fade Out: Consider a fade out to go with the fade in (or would that take too long?)
