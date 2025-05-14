@@ -48,7 +48,7 @@
 
 .entry label {
   font-size: 18px;
-  opacity: 0.80;
+  opacity: 0.90;
   position: absolute;
   transition: opacity 0.6s ease-out, visibility 0.6s;  /* ease out is perfect */
 }
@@ -75,4 +75,25 @@
 
 .smaller {  /* now a lot of that was just so i could have this span in the label! (and it is also accessible) */
   font-size: 14px;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 22px;
+}
+
+.buttons button {  /* okay that's kinda silly */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  background: none;
+  border: none;
+  width: 102px;
+  height: 43px;
+  transition: box-shadow, 0.4s ease;
+}
+
+.buttons button:hover {
+  /* transform: scale(1.05);  /* this makes the image fuzzy */
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5);  /* i've been wanting to have white shadow sometime */
+  cursor: pointer;
 }
