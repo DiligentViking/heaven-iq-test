@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'lithospro-light';
+  src:url('../assets/fonts/lithospro-light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'lithospro-regular';  /* for backup */
+    src:url('../assets/fonts/lithospro-webfont.woff2') format('woff2'),
+        url('../assets/fonts/lithospro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --text-shadow-color: rgba(126, 79, 38, 0.6);
+
+  --title-text-color: white;
+  --other-text-color: rgb(124, 54, 7);
+
+  --title-text-shadow: 2px 4px 2px var(--text-shadow-color);
+  --other-text-shadow: 1px 1px 2px var(--text-shadow-color);
+}
+
+
+body {
+  background-image: url("../assets/background-frame.jpg");  /* it repeats */
+
+  color: var(--other-text-color);
+  font-family: 'lithospro-light', 'lithospro-regular', 'Times New Roman', Times, serif;
+  text-shadow: var(--other-text-shadow);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.container {  /* background-image, height, padding must be specified in dedicated css file */
+  background-size: cover;  /* this worked nicely */
+
+  width: 412px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

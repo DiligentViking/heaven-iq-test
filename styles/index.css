@@ -1,51 +1,11 @@
-@font-face {
-  font-family: 'lithospro-light';
-  src:url('../assets/fonts/lithospro-light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'lithospro-regular';  /* for backup */
-    src:url('../assets/fonts/lithospro-webfont.woff2') format('woff2'),
-        url('../assets/fonts/lithospro-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-
 body {
-  background-image: url("../assets/background-frame.jpg");  /* it repeats */
-
-  color: white;
-  font-family: 'lithospro-light', 'lithospro-regular', 'Times New Roman', Times, serif;
-  text-shadow: 2px 4px 2px rgba(126, 79, 38, 0.6);  /* the bottom text does not look right */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
+  color: var(--title-text-color);  /* the defaults are the --other-text stuff */
+  text-shadow: var(--title-text-shadow);  /* the bottom text does not look right */
 }
 
 .container {
   background-image: url("../assets/Main_Page/bg1.png");
-  background-size: cover;  /* this worked nicely */
-
-  width: 412px;
   height: 917px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 
@@ -78,7 +38,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--title-text-color);
 }
 
 
