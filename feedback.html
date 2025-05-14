@@ -6,7 +6,28 @@
   <title>Give Feedback</title>
   <link rel="stylesheet" href="./styles/feedback.css">
 </head>
-<body>
-  <h1>GIVE FEEDBACK</h1>
+<body onload="document.body.style.opacity='1'">
+  <div class="container">
+    <h1 class="title">GIVE FEEDBACK</h1>
+
+    <div class="entry">
+      <img src="./assets/Give_Feedback/contact_graphic.svg">
+      <input id="name" type="text" name="name">
+      <label for="name">NAME <span class="smaller">(OPTIONAL)</span></label>
+    </div>
+
+    <div class="entry">
+      <img src="./assets/Give_Feedback/email_graphic.svg">
+      <input id="email" type="email" name="email">  <!-- type email but not required -->
+      <label for="email">EMAIL <span class="smaller">(OPTIONAL)</span></label>
+    </div>
+
+    <div class="entry">
+      <textarea id="comments" name="comments"></textarea>
+      <label for="comments">COMMENTS</label>
+    </div>
+
+    <div class="buttons"></div>
+  </div>
 </body>
 </html>

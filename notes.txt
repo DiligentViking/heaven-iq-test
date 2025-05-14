@@ -20,3 +20,5 @@ NOTES
 -Hover Effects: This is rendered obsolete for mobile devices! Consider changing these psuedo-properties to :active or something.
 
 -Fade Out: Consider a fade out to go with the fade in (or would that take too long?)
+
+-Enhancement: I believe the form entries on the Feedback page could be enhanced with some box-shadow, and perhaps some opacity-and-border thing (like on the About_Us card)
