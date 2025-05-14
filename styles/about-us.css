@@ -22,15 +22,16 @@ body {
 .back {
   position: absolute;
   bottom: 35px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   /* transform: scale(1.01)  /* to fix any mistakes */
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .feedback:hover,
 .back:hover {
   transform: scale(1.04);
   cursor: pointer;
-  /* box-shadow: 14px, 14px, 14px, rgb(0, 0, 0);  /* this simply does not do anything */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);  /* this simply does not do anything */
 }
 
 .feedback {
