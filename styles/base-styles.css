@@ -57,8 +57,11 @@ body {
 
 
 .card {
-  border: 2px solid white;
   background-color: rgb(255, 255, 255, 0.8);
+  border: 2px solid white;
+  text-align: center;  /* works for all 'inline contents of a block' */
+  margin: auto;
+  width: 350px;
 }
 
 

@@ -1,4 +1,4 @@
-h1 {
-  outline: 2px solid red;
-  color: red;
+.container {
+  background-image: url('../assets/About_Us/Background.png');
+  background-position: 50% 0;
 }
