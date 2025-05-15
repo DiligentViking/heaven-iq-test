@@ -57,3 +57,27 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+
+.card {
+  border: 2px solid white;
+  background-color: rgb(255, 255, 255, 0.8);
+}
+
+
+.btn {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 102px;
+  height: 43px;  /* i assume all the images are the same width/height */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  outline: 2px solid red;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  outline: 2px solid darkred;
+}
