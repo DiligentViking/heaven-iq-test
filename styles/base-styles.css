@@ -22,7 +22,7 @@
 
 
 :root {
-  --text-shadow-color: rgba(126, 79, 38, 0.6);
+  --text-shadow-color: rgba(126, 79, 38, 0.5);
 
   --title-text-color: white;
   --other-text-color: rgb(124, 54, 7);

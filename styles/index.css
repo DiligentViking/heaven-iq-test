@@ -11,7 +11,6 @@ body {
 
 .title {
   font-size: 30px;
-
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -90,4 +89,30 @@ a {
 
 .extra-options p:hover {
   transform: translate(0, -4px);
+}
+
+
+.note {
+  color: var(--other-text-color);
+  text-shadow: var(--other-text-shadow);
+  text-align: center;  /* this actually works to center everything! i don't need to mess around with flex, which i would have to put in a dialog[open] selector */
+
+  margin: auto;  /* this wondrously works for horizontal AND vertical! */
+  width: 350px;
+}
+
+.note h2 {
+  margin-top: 18px;
+  margin-bottom: 8px;  /* the text content has somewhat of a healthy margin already */
+  font-size: 20px;
+}
+
+.note p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.note button {
+  margin-bottom: 14px;
 }
