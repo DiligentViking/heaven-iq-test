@@ -1,34 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url('../assets/background-frame.jpg');
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-}
-
-.container {
-  position: relative;
-  width: 412px;
-  height: 1375px;
-}
-
-.feedback,
-.back {
-  position: absolute;
-  bottom: 35px;
-  /* transform: scale(1.01)  /* to fix any mistakes */
-}
-
-.feedback {
-  left: 86px;  /* one must be very precise */
-}
-
-.back {
-  left: 224px;
+h1 {
+  outline: 2px solid red;
+  color: red;
 }

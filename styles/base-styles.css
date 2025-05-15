@@ -28,7 +28,7 @@ body {
   background-image: url("../assets/background-frame.jpg");  /* it repeats */
 
   color: var(--other-text-color);
-  font-family: 'lithospro-regular', 'lithospro-light', 'Times New Roman', Times, serif;
+  font-family: 'lithospro-light', 'Times New Roman', Times, serif;
   font-weight: light;
   /* consider font-size */
   text-shadow: var(--other-text-shadow);
