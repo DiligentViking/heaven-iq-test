@@ -1,18 +1,10 @@
 @font-face {
   font-family: 'lithospro-light';
-  src:url('../assets/fonts/lithospro-light.otf') format('opentype');
+  src:url('../assets/fonts/lithospro-light-webfont.woff2') format('woff2'),
+      url('../assets/fonts/lithospro-light-webfont.woff');
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-    font-family: 'lithospro-regular';  /* for backup */
-    src:url('../assets/fonts/lithospro-webfont.woff2') format('woff2'),
-        url('../assets/fonts/lithospro-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 * {
   margin: 0px;
@@ -36,9 +28,14 @@ body {
   background-image: url("../assets/background-frame.jpg");  /* it repeats */
 
   color: var(--other-text-color);
-  font-family: 'lithospro-light', 'lithospro-regular', 'Times New Roman', Times, serif;
+  font-family: 'lithospro-regular', 'lithospro-light', 'Times New Roman', Times, serif;
+  font-weight: light;
   /* consider font-size */
   text-shadow: var(--other-text-shadow);
+
+  -webkit-font-smoothing: antialiased;  /* three css properties that are supposed to increase clarity and consistency of fonts */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; /* Improves text rendering */
 
   display: flex;
   justify-content: center;
