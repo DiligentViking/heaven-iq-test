@@ -7,9 +7,6 @@
 
 
 .title {
-  color: var(--title-text-color);
-  text-shadow: var(--title-text-shadow);
-
   font-size: 40px;
   margin-top: 30px;
   margin-bottom: 50px;

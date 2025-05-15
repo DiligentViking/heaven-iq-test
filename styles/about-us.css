@@ -2,3 +2,46 @@
   background-image: url('../assets/About_Us/Background.png');
   background-position: 50% 0;
 }
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.card > img {  /* it would effect the buttons */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.card a {
+  color: inherit;
+}
+
+.card a:hover {
+  color: lightskyblue;
+}
+
+.card h2 {
+  margin-bottom: 14px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.card p {
+  margin-bottom: 22px;
+  line-height: 1.4;
+  text-indent: 18px;
+}
+
+.card .buttons {
+  margin-bottom: 16px;
+}
+
+.card .buttons .btn:first-child {
+  margin-right: 22px;
+}
