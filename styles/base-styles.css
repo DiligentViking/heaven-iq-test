@@ -71,7 +71,7 @@ body {
   background: none;
   cursor: pointer;
   /* width: 102px; */  /* this caused some issues */
-  height: 43px;  /* i assume all the images are the same width/height */
+  height: 41px;  /* i assume all the images are the same width/height */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
