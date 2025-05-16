@@ -14,10 +14,10 @@
 
 
 :root {
-  --text-shadow-color: rgba(126, 79, 38, 0.5);
+  --text-shadow-color: rgba(73, 46, 22, 0.4);
 
   --title-text-color: white;
-  --other-text-color: rgb(124, 54, 7);
+  --other-text-color: rgb(116, 52, 10);
 
   --title-text-shadow: 2px 4px 2px var(--text-shadow-color);
   --other-text-shadow: 1px 1px 2px var(--text-shadow-color);
@@ -29,7 +29,7 @@ body {
 
   color: var(--other-text-color);
   font-family: 'lithospro-light', 'Times New Roman', Times, serif;
-  font-weight: light;
+  font-weight: normal;
   /* consider font-size */
   text-shadow: var(--other-text-shadow);
 
@@ -72,7 +72,7 @@ body {
 
 
 .btn {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   border: none;
   background: none;
   cursor: pointer;

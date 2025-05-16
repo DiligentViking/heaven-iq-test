@@ -44,14 +44,14 @@
 }
 
 .entry label {
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.90;
   position: absolute;
   transition: opacity 0.6s ease-out, visibility 0.6s;  /* ease out is perfect */
 }
 
 .entry input + label {  /* could ha put this in above selector, but for clarity i will do this */
-  top: 15px;  /* 18 seemed a bit too down */
+  top: 13px;  /* 18 seemed a bit too down */
   left: 62px;
 }
 
