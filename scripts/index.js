@@ -1,10 +1,12 @@
-const container = document.querySelector('.container');
-const startTest = document.querySelector('.start-test');
-const note = document.querySelector('.note');
+const containerDiv = document.querySelector('.container');
+const startTestLink = document.querySelector('.start-test');
+const noteModal = document.querySelector('.note');
 
-startTest.addEventListener('click', (e) => {
+startTestLink.addEventListener('click', (e) => {
   e.preventDefault();  /* so i guess the a is just for accessibility? (because <a> tags are for navigation, <button> tags are for other actions) */
-  const elems = Array.from(container.children);
-  elems.forEach((elem) => elem.setAttribute('style', 'visibility: hidden'));
-  note.showModal();
+  // container.setAttribute('style', 'visibility: hidden');  // but this makes the background image disappear as well
+  const elems = Array.from(containerDiv.children);
+  elems.forEach((elem) => elem.setAttribute('style', 'opacity: 0; visibility: hidden'));
+  noteModal.showModal();
+  noteModal.setAttribute('style', 'opacity: 1');  // i had to put it after
 });
