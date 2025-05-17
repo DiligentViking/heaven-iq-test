@@ -50,9 +50,17 @@
 }
 
 
+.card::before {
+  content: url('../assets/Quiz/q-decor2.png');
+  position: absolute;
+  left: -2px;
+  top: -10px;
+}
+
 .card {
   padding: 30px 16px 16px 16px;
   margin-bottom: 24px;
+  position: relative;
 }
 
 
@@ -63,6 +71,7 @@
 }
 
 .q-before-part {
+  margin-left: 20px;
   margin-bottom: 20px;
 }
 
@@ -105,6 +114,7 @@
 input[type="radio"] {
   appearance: none;
   /* margin-top: 4px; */  /* margin does not do anything here */
+  background: transparent;  /* i want to have a lil shadow on the inside as well */
   border: 2px solid rgb(192, 140, 105);
   min-width: 24px;
   height: 24px;
@@ -120,8 +130,8 @@ input[type="radio"] + label {
 
 input[type="radio"]:hover {  /* label hover also applies this to radio elem */
   cursor: pointer;
-  box-shadow: 1.4px 1.4px 1.8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  box-shadow: 1.4px 1.4px 1.8px rgba(0, 0, 0, 0.2), inset 1.4px 1.4px 1.8px rgba(0, 0, 0, 0.16);
+  transform: scale(1.08);
 }
 
 input[type="radio"]:hover + label {
