@@ -2,7 +2,7 @@
 /*
   {
     beforePart: "",
-    quotePart: "",
+    quotePart: ["",],  // you may need quotes in places
     afterPart: "",
     choices: {
       a: "",
@@ -21,7 +21,7 @@ const theQuestions = [
   {
     category: 'JESUS',
     beforePart: "Complete the following quote from Jesus in the Gospel of John (NIV):",
-    quotePart: "For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.",
+    quotePart: ["\"For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.\"", "EXAMPLE Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam debitis sit modi corrupti labore quae ipsa, quo molestias cum ut impedit laudantium iusto. Maiores tempora quasi beatae accusamus illum.",],
     afterPart: "",
     choices: {
       a: "believes in Him",
@@ -59,23 +59,30 @@ function displayContent(question) {
   progress.textContent = `${theQuestions.indexOf(question)+1} of ${theQuestions.length}`;
 
   qBeforePart.textContent = question.beforePart;
-  qAfterPart.textContent = question.afterPart;
-  qQuotePart.textContent = question.quotePart;
+  ////
+  question.quotePart.forEach((para) => {
+    const p = document.createElement('p');
+    p.textContent = para;
+    qQuotePart.appendChild(p);
+  });
+  ////
+  if (!question.afterPart) qAfterPart.setAttribute('style', 'display: none');
+  else qAfterPart.textContent = question.afterPart;
 
   const choices = Object.entries(question.choices);  // so i can use for loop structure without having a hasOwnProperty thing
   const isEmpty = (choices.length === 0);
   if (!isEmpty) {
     for (const [key, value] of choices) {
-      const radio = document.createElement('input');
-      radio.setAttribute('id', key);
-      radio.setAttribute('type', 'radio');
-      radio.setAttribute('name', 'radio');
+      const input = document.createElement('input');
+      input.setAttribute('id', key);
+      input.setAttribute('type', 'radio');
+      input.setAttribute('name', 'radio');
       ////
       const label = document.createElement('label');
       label.setAttribute('for', key);
       label.textContent = `${key}) ${value}`;
       ////
-      answerSelection.append(radio, label);
+      answerSelection.append(input, label);
     }
   }
 }

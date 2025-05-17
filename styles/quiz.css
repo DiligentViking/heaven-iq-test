@@ -48,3 +48,30 @@
   margin: 0 auto;
   margin-bottom: 4px;
 }
+
+
+.card {
+  padding: 30px 16px 16px 16px;
+}
+
+.q-before-part,
+.q-after-part {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.q-before-part,
+.q-quote-part,
+.q-after-part {
+  margin-bottom: 20px;
+}
+
+.q-quote-part {
+  color: rgb(185, 109, 57);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.q-quote-part > p + p {
+  margin-top: 14px;  /* to create space between paras */
+}
