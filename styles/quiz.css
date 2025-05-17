@@ -54,15 +54,14 @@
   padding: 30px 16px 16px 16px;
 }
 
+
 .q-before-part,
 .q-after-part {
   font-size: 20px;
   line-height: 1.2;
 }
 
-.q-before-part,
-.q-quote-part,
-.q-after-part {
+.q-before-part {
   margin-bottom: 20px;
 }
 
@@ -70,8 +69,73 @@
   color: rgb(185, 109, 57);
   font-size: 16px;
   line-height: 1.4;
+  margin-bottom: 20px;
 }
 
 .q-quote-part > p + p {
   margin-top: 14px;  /* to create space between paras */
+}
+
+
+.answer-selection::before {
+  content: url("../assets/Quiz/Divider_-_shortened_1.png");
+  display: block;
+  margin-top: 30px;  /* my careful margins make it independent of whether the after-part is there or not! */
+  margin-bottom: 30px;
+}
+
+
+.choice {
+  text-align: start;
+  display: flex;
+  align-items: start;
+  gap: 14px;
+}
+
+.choice + .choice {
+  margin-top: 40px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  /* margin-top: 4px; */  /* margin does not do anything here */
+  border: 2px solid rgb(192, 140, 105);
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+input[type="radio"] + label {
+  text-indent: -20px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+input[type="radio"]:hover {  /* label hover also applies this to radio elem */
+  cursor: pointer;
+  box-shadow: 1.4px 1.4px 1.8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+input[type="radio"]:hover + label {
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  background-color: rgb(220, 140, 105);
+  content: ' ';
+  display: block;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: translate(3px, 3px);
+  /* transform-origin: center; */
+  /* transition: opacity 0.8s ease, transform 0.4s ease-out; */
+}
+
+input[type="radio"]:checked::before {
+  opacity: 1;
+  /* transform: translate(3px, 3px) scale(1); */
 }

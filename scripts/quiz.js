@@ -21,7 +21,7 @@ const theQuestions = [
   {
     category: 'JESUS',
     beforePart: "Complete the following quote from Jesus in the Gospel of John (NIV):",
-    quotePart: ["\"For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.\"", "EXAMPLE Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam debitis sit modi corrupti labore quae ipsa, quo molestias cum ut impedit laudantium iusto. Maiores tempora quasi beatae accusamus illum.",],
+    quotePart: ["\"For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.\"",],
     afterPart: "",
     choices: {
       a: "believes in Him",
@@ -41,11 +41,11 @@ const theQuestions = [
 
 
 const container = document.querySelector('.container');
-/* Header */
+////
 const header = document.querySelector('.header');
 const category = document.querySelector('.category');
 const progress = document.querySelector('.progress');
-/* Card */
+////
 const qBeforePart = document.querySelector('.q-before-part');
 const qQuotePart = document.querySelector('.q-quote-part');
 const qAfterPart = document.querySelector('.q-after-part');
@@ -73,6 +73,9 @@ function displayContent(question) {
   const isEmpty = (choices.length === 0);
   if (!isEmpty) {
     for (const [key, value] of choices) {
+      const choiceDiv = document.createElement('div');
+      choiceDiv.classList.add('choice');
+      ////
       const input = document.createElement('input');
       input.setAttribute('id', key);
       input.setAttribute('type', 'radio');
@@ -82,7 +85,8 @@ function displayContent(question) {
       label.setAttribute('for', key);
       label.textContent = `${key}) ${value}`;
       ////
-      answerSelection.append(input, label);
+      choiceDiv.append(input, label);
+      answerSelection.append(choiceDiv);
     }
   }
 }
