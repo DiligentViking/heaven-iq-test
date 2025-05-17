@@ -19,6 +19,7 @@
 
 const theQuestions = [
   {
+    category: 'JESUS',
     beforePart: "Complete the following quote from Jesus in the Gospel of John (NIV):",
     quotePart: "For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.",
     afterPart: "",
@@ -54,6 +55,9 @@ const backBtn = document.querySelector('.back');
 
 
 function displayContent(question) {
+  category.textContent = question.category;
+  progress.textContent = `${theQuestions.indexOf(question)+1} of ${theQuestions.length}`;
+
   qBeforePart.textContent = question.beforePart;
   qAfterPart.textContent = question.afterPart;
   qQuotePart.textContent = question.quotePart;
