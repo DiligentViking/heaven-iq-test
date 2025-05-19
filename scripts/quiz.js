@@ -109,8 +109,8 @@ const theQuestions = [
   },
   {  // 7
     category: "JESUS",
-    beforePart: "In the Sermon",
-    quotePart: ["",],  // you may need quotes in places
+    beforePart: "In the Sermon on the Mount, Jesus taught the crowds the following prayer:",
+    quotePart: ["\"Our Father who art in heaven, \n    Hallowed be thy name. \nThy kingdom come. \nThy will be done on earth \n    as it is in Heaven. \nGive us this day our daily bread; \n    and forgive us our trespasses \n        as we forgive those who \ntrespass against us; \nand lead us not into temptation, \n    but deliver us from evil.\"",],  // added four spaces four times, and eight spaces once
     afterPart: "",
     choices: {
       a: "",  // no cap first letter, only prop nouns
@@ -191,19 +191,18 @@ const userAnswers = [];
 let questionNumber = 0;
 let userSelection;
 
-
 const container = document.querySelector('.container');
-
+////
 const header = document.querySelector('.header');
 const category = document.querySelector('.category');
 const progress = document.querySelector('.progress');
-
+////
 const qBeforePart = document.querySelector('.q-before-part');
 const qQuotePart = document.querySelector('.q-quote-part');
 const qAfterPart = document.querySelector('.q-after-part');
-
+////
 const answerSelection = document.querySelector('.answer-selection');
-
+////
 const nextBtn = document.querySelector('.next');
 const backBtn = document.querySelector('.back');
 
@@ -222,7 +221,7 @@ function displayContent(question) {
   });
   ////
   if (!question.afterPart) qAfterPart.setAttribute('style', 'display: none');
-  else qAfterPart.setAttribute('style', 'display: normal');
+  else qAfterPart.removeAttribute('style');
   qAfterPart.textContent = question.afterPart;
 
   answerSelection.textContent = '';
@@ -247,15 +246,25 @@ function displayContent(question) {
     }
   }
 
-  if (questionNumber === 0) {
-    backBtn.setAttribute('style', 'display: none');
-  } else {
-    backBtn.setAttribute('style', 'display: normal');
-  }
-
   if (userSelection) {
     const prevSelectedRadio = document.getElementById(userSelection);
     prevSelectedRadio.checked = true;
+  }
+
+  /* Special Rules */
+  if (questionNumber === 0) {
+    backBtn.setAttribute('style', 'display: none');
+  } else if (questionNumber === theQuestions.length-1) {
+    nextBtn.setAttribute('style', 'display: none');
+    backBtn.setAttribute('style', 'margin: 0');
+  } else {
+    backBtn.removeAttribute('style');
+    nextBtn.removeAttribute('style');
+  }
+  if (questionNumber+1 == 7) {
+    qQuotePart.setAttribute('style', 'text-align: start; white-space: pre');
+  } else {
+    qQuotePart.removeAttribute('style');
   }
 }
 
@@ -271,6 +280,7 @@ function setUserAnswer() {
 
 
 function QuizController() {
+  questionNumber = theQuestions.length - 1;
   displayContent(theQuestions[questionNumber]);
 
   answerSelection.addEventListener('click', (e) => {
@@ -281,14 +291,15 @@ function QuizController() {
     const isAnswered = setUserAnswer();
     if (!isAnswered) console.log('Question skipped!');
     questionNumber++;
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);  // commenting this out for now so i can get to the btn's faster
     userSelection = userAnswers[questionNumber];
     displayContent(theQuestions[questionNumber]);
   });
 
   backBtn.addEventListener('click', () => {
+    setUserAnswer();  // so that >whenever< something is answered, it stays answered (i think that is the best UX)
     questionNumber--;
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     userSelection = userAnswers[questionNumber];
     displayContent(theQuestions[questionNumber]);
   });
@@ -296,4 +307,3 @@ function QuizController() {
 
 
 QuizController();
-// displayContent(theQuestions[theQuestions.length-1]);
