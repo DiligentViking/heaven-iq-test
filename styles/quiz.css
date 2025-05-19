@@ -83,6 +83,7 @@ body {
 
 .q-quote-part {
   color: rgb(185, 109, 57);
+  text-align: justify;
   font-size: 16px;
   line-height: 1.4;
   margin-bottom: 20px;
@@ -102,11 +103,12 @@ body {
 
 .answer-selection {
   font-size: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 
 .choice {
+  line-height: 1.4;
   text-align: start;
   display: flex;
   align-items: start;
@@ -114,7 +116,7 @@ body {
 }
 
 .choice + .choice {
-  margin-top: 40px;
+  margin-top: 34px;
 }
 
 input[type="radio"] {

@@ -1,7 +1,8 @@
 /* TEMPLATE */
 /*
-  {
+  {  // 10
     category: "JESUS",
+    hellTheme: false,
     beforePart: "",
     quotePart: ["",],  // you may need quotes in places
     afterPart: "",
@@ -13,13 +14,12 @@
       e: "",
       f: "",
     },
-    custom: {},
     answer: "",
   },
 */
 
 const theQuestions = [
-  {
+  {  // 1
     category: 'JESUS',
     beforePart: "Complete the following quote from Jesus in the Gospel of John (NIV):",
     quotePart: ["\"For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.\"",],
@@ -32,10 +32,9 @@ const theQuestions = [
       e: "accepts Him as their Lord and Savior",
       f: "does not contribute to Climate Change",
     },
-    custom: {},
     answer: "a",
   },
-  {
+  {  // 2
     category: 'JESUS',
     beforePart: "Complete the following statement from Jesus in the Gospel of Matthew (NIV):",
     quotePart: ["\"Not everyone who says to me, 'Lord, Lord,' will enter the Kingdom of Heaven, but only _____\"",],
@@ -47,8 +46,141 @@ const theQuestions = [
       d: "the one who does the will of my Father who is in Heaven",
       e: "Jesus did not say this and everybody will go to Heaven because there is no such thing as Hell.",
     },
-    custom: {},
     answer: "d",
+  },
+  {  // 3
+    category: "JESUS",
+    beforePart: "Read the following passage from the Gospel of Luke (NIV):",
+    quotePart: ["On one occasion an expert in the law stood up to test Jesus. \"Teacher,\" he asked, \"what must I do to inherit eternal life?\"", "\"What is written in the law?\" he replied. \"How do you read it?\"", "He answered, \"'Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind'; and, 'Love your neighbor as yourself.'\""],
+    afterPart: "Choose Jesus' Reply to the expert in the law.",
+    choices: {
+      a: "\"That is false,\" Jesus replied. \"How is it you are considered a scholar?\"",
+      b: "\"That is false,\" Jesus replied. \"This teaching is of the Pharisees but not of God.\"",
+      c: "\"That was true with the Old Covenant [based upon law], which has been fulfilled in your sight,\" Jesus replied. \"In the New Covenant now upon you, grace is the path to eternal life.\"",
+      d: "\"You have answered correctly,\" Jesus replied. \"Do this and you will live.\"",
+    },
+    answer: "d",
+  },
+  {  // 4
+    category: "JESUS",
+    beforePart: "Complete the passage below from the Gospel of Mark (KJV):",
+    quotePart: ["Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.", "And she went and told them that had been with him, as they mourned and wept.", "And they, when they had heard that he was alive, and had been seen of her, believed not.", "After that he appeared unto two of them, as they walked, and went into the country.", "And they went and told it unto the residue: neither believed they them.", "Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.", "And he said unto them, \"Go ye into all the world, and preach the gospel to every creature.", "He that _____ shall be saved; but he that _____ shall be damned.\""],
+    afterPart: "",
+    choices: {
+      a: "confess with thy lips / doeth not",
+      b: "believeth and is baptized / believeth not",
+      c: "be not sexist / be misogynistic",
+      d: "doeth good / doeth evil",
+      e: "doth convert to Christ / doth remain a Jew",
+    },
+    answer: "b",
+  },
+  {  // 5
+    category: "JESUS",
+    hellTheme: true,
+    beforePart: "Complete Jesus' words from the Gospel of John (NAB)",
+    quotePart: ["Amen, Amen, I say to you, the hour is coming and is now here when the dead will hear the voice of the Son of God, and those who hear will live. For just as the Father has life in himself, so also he gave his Son the possission of life in himself. And he gave him power to exercise judgment, because he is the Son of Man. Do not be amazed at this, because the hour is coming in which all who are in the tombs will hear his voice and will come out, those who _____ to the resurrection of life, but those who _____ to the resurrection of condemnation.",],  // you may need quotes in places
+    afterPart: "",
+    choices: {
+      a: "have accepted me as their Lord / are unsaved",
+      b: "are Baptized / are not Baptized",
+      c: "are still human / are zombies",
+      d: "are on the right / are on the left",
+      e: "are good / are bad",
+      f: "have good hearing / are deaf",
+      g: "have done good deeds / have done wicked deeds",
+    },
+    answer: "g",
+  },
+  {  // 6
+    category: "JESUS",
+    beforePart: "Complete the words of Jesus in Luke's Gospel (NAB):",
+    quotePart: ["He came to Jericho and intended to pass through the town. Now a man there named Zacchaeus, who was a chief tax collector and also a wealthy man, was seeking to see who Jesus was; but he could not see him because of the crowd, for he was short in stature. So he ran ahead and climbed a sycamore tree in order to see Jesus, who was about to pass that way. When he reached the place, Jesus looked up and said to him, \"Zacchaeus, come down quickly, for today I must stay at your house.\" And he came down quickly and received him with joy. When they all saw this, they began to grumble, saying, \"He has gone to stay at the house of a sinner.\" But Zacchaeus stood there and said to the Lord, \"Behold, half of my possessions, Lord, I shall give to the poor, and if I have extorted anything from anyone I shall repay it four times over.\" And Jesus said to him, \"Today Salvation has come to this house because this man too is a descendant of Abraham. For the Son of Man has come _____.\"",],
+    afterPart: "",
+    choices: {
+      a: "to preach the Gospel to all the house of Israel",
+      b: "to seek and to save what was lost",
+      c: "to all who welcome him",
+      d: "to make reparations",
+      e: "to collect interest",
+      f: "to tax the rich",
+    },
+    answer: "b",
+  },
+  {  // 7
+    category: "JESUS",
+    beforePart: "In the Sermon",
+    quotePart: ["",],  // you may need quotes in places
+    afterPart: "",
+    choices: {
+      a: "",  // no cap first letter, only prop nouns
+      b: "",
+      c: "",
+      d: "",
+      e: "",
+      f: "",
+    },
+    answer: "",
+  },
+  {  // 8
+    category: "JESUS",
+    beforePart: "",
+    quotePart: ["",],  // you may need quotes in places
+    afterPart: "",
+    choices: {
+      a: "",  // no cap first letter, only prop nouns
+      b: "",
+      c: "",
+      d: "",
+      e: "",
+      f: "",
+    },
+    answer: "",
+  },
+  {  // 9
+    category: "JESUS",
+    beforePart: "",
+    quotePart: ["",],  // you may need quotes in places
+    afterPart: "",
+    choices: {
+      a: "",  // no cap first letter, only prop nouns
+      b: "",
+      c: "",
+      d: "",
+      e: "",
+      f: "",
+    },
+    answer: "",
+  },
+  {  // 10
+    category: "JESUS",
+    beforePart: "",
+    quotePart: ["",],  // you may need quotes in places
+    afterPart: "",
+    choices: {
+      a: "",  // no cap first letter, only prop nouns
+      b: "",
+      c: "",
+      d: "",
+      e: "",
+      f: "",
+    },
+    answer: "",
+  },
+  {  // 11
+    category: "JESUS",
+    beforePart: "",
+    quotePart: ["",],  // you may need quotes in places
+    afterPart: "",
+    choices: {
+      a: "",  // no cap first letter, only prop nouns
+      b: "",
+      c: "",
+      d: "",
+      e: "",
+      f: "",
+    },
+    answer: "",
   },
 ];
 
@@ -61,17 +193,17 @@ let userSelection;
 
 
 const container = document.querySelector('.container');
-////
+
 const header = document.querySelector('.header');
 const category = document.querySelector('.category');
 const progress = document.querySelector('.progress');
-////
+
 const qBeforePart = document.querySelector('.q-before-part');
 const qQuotePart = document.querySelector('.q-quote-part');
 const qAfterPart = document.querySelector('.q-after-part');
-////
+
 const answerSelection = document.querySelector('.answer-selection');
-////
+
 const nextBtn = document.querySelector('.next');
 const backBtn = document.querySelector('.back');
 
@@ -90,7 +222,8 @@ function displayContent(question) {
   });
   ////
   if (!question.afterPart) qAfterPart.setAttribute('style', 'display: none');
-  else qAfterPart.textContent = question.afterPart;
+  else qAfterPart.setAttribute('style', 'display: normal');
+  qAfterPart.textContent = question.afterPart;
 
   answerSelection.textContent = '';
   const choices = Object.entries(question.choices);  // so i can use for loop structure without having a hasOwnProperty thing
@@ -127,7 +260,7 @@ function displayContent(question) {
 }
 
 
-function setUserAnswer() {  // now this part may be a bit clunky
+function setUserAnswer() {
   if (userSelection) {
     userAnswers[questionNumber] = userSelection;
     userSelection = undefined;
@@ -146,14 +279,16 @@ function QuizController() {
 
   nextBtn.addEventListener('click', () => {
     const isAnswered = setUserAnswer();
-    if (!isAnswered) alert('Question skipped!');
+    if (!isAnswered) console.log('Question skipped!');
     questionNumber++;
+    window.scrollTo(0, 0);
     userSelection = userAnswers[questionNumber];
     displayContent(theQuestions[questionNumber]);
   });
 
   backBtn.addEventListener('click', () => {
     questionNumber--;
+    window.scrollTo(0, 0);
     userSelection = userAnswers[questionNumber];
     displayContent(theQuestions[questionNumber]);
   });
@@ -161,3 +296,4 @@ function QuizController() {
 
 
 QuizController();
+// displayContent(theQuestions[theQuestions.length-1]);
