@@ -111,51 +111,49 @@ const theQuestions = [
     category: "JESUS",
     beforePart: "In the Sermon on the Mount, Jesus taught the crowds the following prayer:",
     quotePart: ["\"Our Father who art in heaven, \n    Hallowed be thy name. \nThy kingdom come. \nThy will be done on earth \n    as it is in Heaven. \nGive us this day our daily bread; \n    and forgive us our trespasses \n        as we forgive those who \ntrespass against us; \nand lead us not into temptation, \n    but deliver us from evil.\"",],  // added four spaces four times, and eight spaces once
-    afterPart: "",
+    afterPart: "What did Jesus say immediately after this?",
     choices: {
-      a: "",  // no cap first letter, only prop nouns
-      b: "",
-      c: "",
-      d: "",
-      e: "",
-      f: "",
+      a: "\"If you do not treat the Father's name as hallowed, you will not go to heaven.\"",
+      b: "\"The kingdom of God will come shortly after my return, for I will be raised to the heavens after I die.\"",
+      c: "\"For if you forgive men their trespasses, your heavenly father also will forgive you; but if you do not forgive men their trespasses, neither will your Father forgive your trespasses.\"",
+      d: "\"For my Father will never lead you into temptation that you cannot handle.\"",
+      e: "\"Amen\"",
     },
-    answer: "",
+    answer: "c",
   },
   {  // 8
     category: "JESUS",
-    beforePart: "",
-    quotePart: ["",],  // you may need quotes in places
+    hellTheme: true,
+    beforePart: "Jesus told His disciples many troubling things they should expect at the end of the age. Complete the following scripture from the Gospel of Matthew (NAB):",
+    quotePart: ["\"Then they will hand you over to persecution, and they will kill you. You will be hated by all nations because of my name. And then many will be led into sin; they will betray and hate one another. Many false prophets will arise and deceive many; and because of the increase of evildoing, the love of many will grow cold. But the _____ will be saved.\"",],
     afterPart: "",
     choices: {
-      a: "",  // no cap first letter, only prop nouns
-      b: "",
-      c: "",
-      d: "",
-      e: "",
-      f: "",
+      a: "ones who accept me as their Lord and Savior",
+      b: "ones who run fast when they see these signs",
+      c: "ones who live sustainably",
+      d: "Jews",
+      e: "one who perseveres to the end",
+      f: "true Christian",
     },
-    answer: "",
+    answer: "e",
   },
   {  // 9
     category: "JESUS",
-    beforePart: "",
-    quotePart: ["",],  // you may need quotes in places
-    afterPart: "",
+    beforePart: "In the Gospel of John (KJV), Jesus described Himself to the crowds of people as the \"bread of life\" that \"comes down from heaven.\" He then said:",
+    quotePart: ["\"I am that bread of life.", "Your fathers did eat manna in the wilderness, and are dead.", "This is the bread which cometh down from heaven, that a man may eat thereof, and not die.", "I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world...", "The Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.\""],
+    afterPart: "How did many of His disciples react after His statements?",
     choices: {
-      a: "",  // no cap first letter, only prop nouns
-      b: "",
-      c: "",
-      d: "",
-      e: "",
-      f: "",
+      a: "They knew Jesus was talking figuratively about Moses giving manna to the people; they invited Him to stay on longer in their town.",
+      b: "They thought that Jesus was talking about Moses and that Jesus was comparing Himself to Elijah in the desert.",
+      c: "They rejected what Jesus said, returned to their former way of life, and no longer accompanied Him.",
+      d: "They did not know what Jesus was talking about, but they invited him to dinner.",
     },
-    answer: "",
+    answer: "c",
   },
   {  // 10
     category: "JESUS",
-    beforePart: "",
-    quotePart: ["",],  // you may need quotes in places
+    beforePart: "Complete Jesus' words in the following Scripture from the Gospel of Luke (NAB):",
+    quotePart: ["\"Stop judging and you will not be judged. Stop condemning and you will not be condemned. __1__ and you will be __2__. Give and gifts will be given to you; a good measure, packed together, shaken down, and overflowing, will be poured into your lap. For the measure with which you measure will in return be measured out to you.\"",],
     afterPart: "",
     choices: {
       a: "",  // no cap first letter, only prop nouns
@@ -265,6 +263,31 @@ function displayContent(question) {
     qQuotePart.setAttribute('style', 'text-align: start; white-space: pre');
   } else {
     qQuotePart.removeAttribute('style');
+  }
+  if (questionNumber+1 == 10 && false) {  // for questions with convoluted numbered blanks  // wait why the heck didn't we just do the division thing?! [at least i got a small mental workout]
+    qQuotePart.textContent = '';
+    question.quotePart.forEach((para) => {
+      const p = document.createElement('p');
+      const re= /__\d__/g;
+      const numberedBlanks = para.match(re);
+      console.log(numberedBlanks);
+      if (numberedBlanks) {
+        let lastBlank = 0;
+        for (const blank of numberedBlanks) {
+          const span = document.createElement('span');
+          const number = blank.slice(2, 3);
+          span.classList.add('fill-in-the-blank');
+          span.textContent = `  ${number}  `;
+          const textBeforeBlank = para.slice(lastBlank, para.indexOf(blank));
+          lastBlank = para.indexOf(blank) + blank.length;
+          p.append(textBeforeBlank, span);
+        }
+        const restOfText = para.slice(lastBlank);
+        p.append(restOfText);
+      }
+      // p.textContent = para;
+      qQuotePart.appendChild(p);
+    });
   }
 }
 

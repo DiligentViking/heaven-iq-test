@@ -89,6 +89,11 @@ body {
   margin-bottom: 20px;
 }
 
+.fill-in-the-blank {
+  text-decoration: underline;
+  white-space: pre;
+}
+
 .q-quote-part > p + p {
   margin-top: 14px;  /* to create space between paras */
 }
