@@ -22,7 +22,7 @@ const theQuestions = [
   {  // 1
     category: 'JESUS',
     beforePart: "Complete the following quote from Jesus in the Gospel of John (NIV):",
-    quotePart: ["\"For God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.\"",],
+    quotePart: ["\u201cFor God so loved the world that He gave His one and only son, that whoever _____ shall not perish but have eternal life. For God did not send His Son into the world to condemn the world, but to save the world through Him.\u201d",],
     afterPart: "",
     choices: {
       a: "believes in Him",
@@ -37,7 +37,7 @@ const theQuestions = [
   {  // 2
     category: 'JESUS',
     beforePart: "Complete the following statement from Jesus in the Gospel of Matthew (NIV):",
-    quotePart: ["\"Not everyone who says to me, 'Lord, Lord,' will enter the Kingdom of Heaven, but only _____\"",],
+    quotePart: ["\u201cNot everyone who says to me, 'Lord, Lord,' will enter the Kingdom of Heaven, but only _____\u201d",],
     afterPart: "",
     choices: {
       a: "those who accept me as their Lord and Savior",
@@ -51,20 +51,20 @@ const theQuestions = [
   {  // 3
     category: "JESUS",
     beforePart: "Read the following passage from the Gospel of Luke (NIV):",
-    quotePart: ["On one occasion an expert in the law stood up to test Jesus. \"Teacher,\" he asked, \"what must I do to inherit eternal life?\"", "\"What is written in the law?\" he replied. \"How do you read it?\"", "He answered, \"'Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind'; and, 'Love your neighbor as yourself.'\""],
+    quotePart: ["On one occasion an expert in the law stood up to test Jesus. \u201cTeacher,\u201d he asked, \u201cwhat must I do to inherit eternal life?\u201d", "\u201cWhat is written in the law?\u201d he replied. \u201cHow do you read it?\u201d", "He answered, \u201c'Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind'; and, 'Love your neighbor as yourself.'\u201d"],
     afterPart: "Choose Jesus' Reply to the expert in the law.",
     choices: {
-      a: "\"That is false,\" Jesus replied. \"How is it you are considered a scholar?\"",
-      b: "\"That is false,\" Jesus replied. \"This teaching is of the Pharisees but not of God.\"",
-      c: "\"That was true with the Old Covenant [based upon law], which has been fulfilled in your sight,\" Jesus replied. \"In the New Covenant now upon you, grace is the path to eternal life.\"",
-      d: "\"You have answered correctly,\" Jesus replied. \"Do this and you will live.\"",
+      a: "\u201cThat is false,\u201d Jesus replied. \u201cHow is it you are considered a scholar?\u201d",
+      b: "\u201cThat is false,\u201d Jesus replied. \u201cThis teaching is of the Pharisees but not of God.\u201d",
+      c: "\u201cThat was true with the Old Covenant [based upon law], which has been fulfilled in your sight,\u201d Jesus replied. \u201cIn the New Covenant now upon you, grace is the path to eternal life.\u201d",
+      d: "\u201cYou have answered correctly,\u201d Jesus replied. \u201cDo this and you will live.\u201d",
     },
     answer: "d",
   },
   {  // 4
     category: "JESUS",
     beforePart: "Complete the passage below from the Gospel of Mark (KJV):",
-    quotePart: ["Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.", "And she went and told them that had been with him, as they mourned and wept.", "And they, when they had heard that he was alive, and had been seen of her, believed not.", "After that he appeared unto two of them, as they walked, and went into the country.", "And they went and told it unto the residue: neither believed they them.", "Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.", "And he said unto them, \"Go ye into all the world, and preach the gospel to every creature.", "He that _____ shall be saved; but he that _____ shall be damned.\""],
+    quotePart: ["Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.", "And she went and told them that had been with him, as they mourned and wept.", "And they, when they had heard that he was alive, and had been seen of her, believed not.", "After that he appeared unto two of them, as they walked, and went into the country.", "And they went and told it unto the residue: neither believed they them.", "Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.", "And he said unto them, \u201cGo ye into all the world, and preach the gospel to every creature.", "He that _____ shall be saved; but he that _____ shall be damned.\u201d"],
     afterPart: "",
     choices: {
       a: "confess with thy lips / doeth not",
@@ -95,7 +95,7 @@ const theQuestions = [
   {  // 6
     category: "JESUS",
     beforePart: "Complete the words of Jesus in Luke's Gospel (NAB):",
-    quotePart: ["He came to Jericho and intended to pass through the town. Now a man there named Zacchaeus, who was a chief tax collector and also a wealthy man, was seeking to see who Jesus was; but he could not see him because of the crowd, for he was short in stature. So he ran ahead and climbed a sycamore tree in order to see Jesus, who was about to pass that way. When he reached the place, Jesus looked up and said to him, \"Zacchaeus, come down quickly, for today I must stay at your house.\" And he came down quickly and received him with joy. When they all saw this, they began to grumble, saying, \"He has gone to stay at the house of a sinner.\" But Zacchaeus stood there and said to the Lord, \"Behold, half of my possessions, Lord, I shall give to the poor, and if I have extorted anything from anyone I shall repay it four times over.\" And Jesus said to him, \"Today Salvation has come to this house because this man too is a descendant of Abraham. For the Son of Man has come _____.\"",],
+    quotePart: ["He came to Jericho and intended to pass through the town. Now a man there named Zacchaeus, who was a chief tax collector and also a wealthy man, was seeking to see who Jesus was; but he could not see him because of the crowd, for he was short in stature. So he ran ahead and climbed a sycamore tree in order to see Jesus, who was about to pass that way. When he reached the place, Jesus looked up and said to him, \u201cZacchaeus, come down quickly, for today I must stay at your house.\u201d And he came down quickly and received him with joy. When they all saw this, they began to grumble, saying, \u201cHe has gone to stay at the house of a sinner.\u201d But Zacchaeus stood there and said to the Lord, \u201cBehold, half of my possessions, Lord, I shall give to the poor, and if I have extorted anything from anyone I shall repay it four times over.\u201d And Jesus said to him, \u201cToday Salvation has come to this house because this man too is a descendant of Abraham. For the Son of Man has come _____.\u201d",],
     afterPart: "",
     choices: {
       a: "to preach the Gospel to all the house of Israel",
@@ -110,14 +110,14 @@ const theQuestions = [
   {  // 7
     category: "JESUS",
     beforePart: "In the Sermon on the Mount, Jesus taught the crowds the following prayer:",
-    quotePart: ["\"Our Father who art in heaven, \n    Hallowed be thy name. \nThy kingdom come. \nThy will be done on earth \n    as it is in Heaven. \nGive us this day our daily bread; \n    and forgive us our trespasses \n        as we forgive those who \ntrespass against us; \nand lead us not into temptation, \n    but deliver us from evil.\"",],  // added four spaces four times, and eight spaces once
+    quotePart: ["\u201cOur Father who art in heaven, \n    Hallowed be thy name. \nThy kingdom come. \nThy will be done on earth \n    as it is in Heaven. \nGive us this day our daily bread; \n    and forgive us our trespasses \n        as we forgive those who \ntrespass against us; \nand lead us not into temptation, \n    but deliver us from evil.\u201d",],  // added four spaces four times, and eight spaces once
     afterPart: "What did Jesus say immediately after this?",
     choices: {
-      a: "\"If you do not treat the Father's name as hallowed, you will not go to heaven.\"",
-      b: "\"The kingdom of God will come shortly after my return, for I will be raised to the heavens after I die.\"",
-      c: "\"For if you forgive men their trespasses, your heavenly father also will forgive you; but if you do not forgive men their trespasses, neither will your Father forgive your trespasses.\"",
-      d: "\"For my Father will never lead you into temptation that you cannot handle.\"",
-      e: "\"Amen\"",
+      a: "\u201cIf you do not treat the Father's name as hallowed, you will not go to heaven.\u201d",
+      b: "\u201cThe kingdom of God will come shortly after my return, for I will be raised to the heavens after I die.\u201d",
+      c: "\u201cFor if you forgive men their trespasses, your heavenly father also will forgive you; but if you do not forgive men their trespasses, neither will your Father forgive your trespasses.\u201d",
+      d: "\u201cFor my Father will never lead you into temptation that you cannot handle.\u201d",
+      e: "\u201cAmen\u201d",
     },
     answer: "c",
   },
@@ -125,7 +125,7 @@ const theQuestions = [
     category: "JESUS",
     hellTheme: true,
     beforePart: "Jesus told His disciples many troubling things they should expect at the end of the age. Complete the following scripture from the Gospel of Matthew (NAB):",
-    quotePart: ["\"Then they will hand you over to persecution, and they will kill you. You will be hated by all nations because of my name. And then many will be led into sin; they will betray and hate one another. Many false prophets will arise and deceive many; and because of the increase of evildoing, the love of many will grow cold. But the _____ will be saved.\"",],
+    quotePart: ["\u201cThen they will hand you over to persecution, and they will kill you. You will be hated by all nations because of my name. And then many will be led into sin; they will betray and hate one another. Many false prophets will arise and deceive many; and because of the increase of evildoing, the love of many will grow cold. But the _____ will be saved.\u201d",],
     afterPart: "",
     choices: {
       a: "ones who accept me as their Lord and Savior",
@@ -139,8 +139,8 @@ const theQuestions = [
   },
   {  // 9
     category: "JESUS",
-    beforePart: "In the Gospel of John (KJV), Jesus described Himself to the crowds of people as the \"bread of life\" that \"comes down from heaven.\" He then said:",
-    quotePart: ["\"I am that bread of life.", "Your fathers did eat manna in the wilderness, and are dead.", "This is the bread which cometh down from heaven, that a man may eat thereof, and not die.", "I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world...", "The Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.\""],
+    beforePart: "In the Gospel of John (KJV), Jesus described Himself to the crowds of people as the \u201cbread of life\u201d that \u201ccomes down from heaven.\u201d He then said:",
+    quotePart: ["\u201cI am that bread of life.", "Your fathers did eat manna in the wilderness, and are dead.", "This is the bread which cometh down from heaven, that a man may eat thereof, and not die.", "I am the living bread which came down from heaven: if any man eat of this bread, he shall live for ever: and the bread that I will give is my flesh, which I will give for the life of the world...", "The Jesus said unto them, Verily, verily, I say unto you, Except ye eat the flesh of the Son of man, and drink his blood, ye have no life in you.\u201d"],
     afterPart: "How did many of His disciples react after His statements?",
     choices: {
       a: "They knew Jesus was talking figuratively about Moses giving manna to the people; they invited Him to stay on longer in their town.",
@@ -153,7 +153,7 @@ const theQuestions = [
   {  // 10
     category: "JESUS",
     beforePart: "Complete Jesus' words in the following Scripture from the Gospel of Luke (NAB):",
-    quotePart: ["\"Stop judging and you will not be judged. Stop condemning and you will not be condemned. _____ and you will be _____. Give and gifts will be given to you; a good measure, packed together, shaken down, and overflowing, will be poured into your lap. For the measure with which you measure will in return be measured out to you.\"",],
+    quotePart: ["\u201cStop judging and you will not be judged. Stop condemning and you will not be condemned. _____ and you will be _____. Give and gifts will be given to you; a good measure, packed together, shaken down, and overflowing, will be poured into your lap. For the measure with which you measure will in return be measured out to you.\u201d",],
     afterPart: "",
     choices: {
       a: "Forgive / forgiven",
@@ -169,14 +169,14 @@ const theQuestions = [
     category: "JESUS",
     hellTheme: true,
     beforePart: "In the Gospel of Matthew (NIV), Jesus said the following:",
-    quotePart: ["\"...anyone who looks at a woman lustfully has already committed adultery with her in his heart. If your right eye causes you to stumble, gouge it out and throw it away... And if your right hand causes you to stumble, cut it off and throw it away.\"",],
+    quotePart: ["\u201c...anyone who looks at a woman lustfully has already committed adultery with her in his heart. If your right eye causes you to stumble, gouge it out and throw it away... And if your right hand causes you to stumble, cut it off and throw it away.\u201d",],
     afterPart: "What did Jesus say right after these statements?",
     choices: {
-      a: "\"The right parts of your body are always more evil than the left parts.\"",
-      b: "\"That way you will only sin half as much.\"",
-      c: "\"This is not necessary for people who are saved.\"",
-      d: "\"These exaggerations indicate what all men deserve without grace.\"",
-      e: "\"It is better for you to lose one part of your body than for your whole body to go into hell.\"",
+      a: "\u201cThe right parts of your body are always more evil than the left parts.\u201d",
+      b: "\u201cThat way you will only sin half as much.\u201d",
+      c: "\u201cThis is not necessary for people who are saved.\u201d",
+      d: "\u201cThese exaggerations indicate what all men deserve without grace.\u201d",
+      e: "\u201cIt is better for you to lose one part of your body than for your whole body to go into hell.\u201d",
     },
     answer: "e",
   },
@@ -197,7 +197,7 @@ const theQuestions = [
   {  // 13
     category: "JESUS",
     beforePart: "At the Last Supper, Jesus gave his disciples several instructions. Complete his words as they are recorded in the Gospel of John (NAB):",
-    quotePart: ["\"I have told you this so that my joy might be in you and your joy might be complete. This is my commandment: love one another _____. No one has greater love than this, to lay down one's life for one's friends. You are my friends if you do what I command you.",],
+    quotePart: ["\u201cI have told you this so that my joy might be in you and your joy might be complete. This is my commandment: love one another _____. No one has greater love than this, to lay down one's life for one's friends. You are my friends if you do what I command you.\u201d",],
     afterPart: "",
     choices: {
       a: "as I have commanded you",
@@ -213,7 +213,7 @@ const theQuestions = [
     category: "JESUS",
     hellTheme: true,
     beforePart: "Jesus warned his disciples that they would be persecuted for proclaiming his words. Complete the following statement Jesus made in the Gospel of Matthew (NAB):",
-    quotePart: ["\"Everyone who acknowledges me before others I will acknowledge before my heavenly Father. But whoever denies me before others _____.\"",],
+    quotePart: ["\u201cEveryone who acknowledges me before others I will acknowledge before my heavenly Father. But whoever denies me before others _____.\u201d",],
     afterPart: "",
     choices: {
       a: ", will acknowledge me in the end",
@@ -227,7 +227,7 @@ const theQuestions = [
   {  // 15
     category: "JESUS",
     beforePart: "In the Gospel of Matthew (NAB), a rich young man asked Jesus what he must do to gain eternal life. Choose Jesus' reply.",
-    quotePart: ["Now someone approached him and said, \"Teacher, what good must I do to gain eternal life?\" He answered him, \"Why do you ask me about the good? There is only One who is good. _____.\"",],
+    quotePart: ["Now someone approached him and said, \u201cTeacher, what good must I do to gain eternal life?\u201d He answered him, \u201cWhy do you ask me about the good? There is only One who is good. _____.\u201d",],
     afterPart: "",
     choices: {
       a: "Since nobody is good, you cannot earn Heaven by good works; simply believe in me and accept me as Lord",
@@ -244,11 +244,11 @@ const theQuestions = [
     quotePart: ["",],
     afterPart: "",
     choices: {
-      a: "\"Enter by the narrow gate; for the gate is wide and the way is easy that leads to destruction, and those who enter by it are many. For the gate is narrow and the way is hard that leads to life, and those who find it are few.\"",
-      b: "\"Enter by the wide gate; for the road to heaven is well-traveled, and most follow this path. For the gate to hell is narrow, and the few who enter by it are beholden to evil.\"",
-      c: "\"All roads lead to life because there is no such thing as Hell, as the false religions teach.\"",
-      d: "\"All roads lead to life for those who confess me with their lips and believe that i am God.",
-      e: "\"Life is a journey, not a destination.\"",
+      a: "\u201cEnter by the narrow gate; for the gate is wide and the way is easy that leads to destruction, and those who enter by it are many. For the gate is narrow and the way is hard that leads to life, and those who find it are few.\u201d",
+      b: "\u201cEnter by the wide gate; for the road to heaven is well-traveled, and most follow this path. For the gate to hell is narrow, and the few who enter by it are beholden to evil.\u201d",
+      c: "\u201cAll roads lead to life because there is no such thing as Hell, as the false religions teach.\u201d",
+      d: "\u201cAll roads lead to life for those who confess me with their lips and believe that i am God.\u201d",
+      e: "\u201cLife is a journey, not a destination.\u201d",
     },
     answer: "a",
   },
@@ -256,13 +256,13 @@ const theQuestions = [
     category: "JESUS",
     hellTheme: true,
     beforePart: "Read the following scripture passage from the Gospel of Matthew (NIV) where Jesus talks about judging the nations:",
-    quotePart: ["\"When the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\"Then the King will say to those on his right, 'Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...", "\"Then he will say to those on his left, 'Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\""],
+    quotePart: ["\u201cWhen the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\u201dThen the King will say to those on his right, 'Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...", "\u201cThen he will say to those on his left, 'Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\u201d"],
     afterPart: "Who does Jesus say are the sheep and the goats?",
     choices: {
-      a: "The sheep are the ones who gave food, drink, clothes, welcome, and care to \"the least of [Jesus'] brothers and sisters,\" the goats are the ones who did not.",
-      b: "The goats are the ones who were \"saved,\" the sheep are the ones who were not saved.",
-      c: "The goats are the ones who \"Didn't wander from [Jesus'] flock,\" the sheep are the ones that strayed.",
-      d: "The sheep are the ones who confessed Jesus and lived \"in the kingdom\" of God, the goats are the ones who didn't follow Jesus and lived outside the gates.",
+      a: "The sheep are the ones who gave food, drink, clothes, welcome, and care to \u201cthe least of [Jesus'] brothers and sisters,\u201d the goats are the ones who did not.",
+      b: "The goats are the ones who were \u201csaved,\u201d the sheep are the ones who were not saved.",
+      c: "The goats are the ones who \u201cDidn't wander from [Jesus'] flock,\u201d the sheep are the ones that strayed.",
+      d: "The sheep are the ones who confessed Jesus and lived \u201cin the kingdom\u201d of God, the goats are the ones who didn't follow Jesus and lived outside the gates.",
       e: "The sheep are the ones with soft wool, the goats are the ones with scratchy hair",
       f: "Jesus didn't say this because there is no such thing as Hell.",
     },
@@ -271,11 +271,11 @@ const theQuestions = [
   {  // 18
     category: "OLD TESTAMENT",
     beforePart: "Ezekiel was a prophet of the Old Testament era. Complete what God told him in the book of Ezekiel (NAB):",
-    quotePart: ["\"Justice belongs to the just, and wickedness to the wicked.", "But if the wicked man turns away from all the sins he has committed, if he keeps all my statutes and does what is just and right, _____.", "...And if the just turn from justice and do evil, like all the abominations the wicked do... _____.\""],
+    quotePart: ["\u201cJustice belongs to the just, and wickedness to the wicked.", "But if the wicked man turns away from all the sins he has committed, if he keeps all my statutes and does what is just and right, _____.", "...And if the just turn from justice and do evil, like all the abominations the wicked do... _____.\u201d"],
     afterPart: "",
     choices: {
       a: "he shall surely become a believer / they are still saved",
-      b: "he will rejoin the house of Israel / they will be cast out and receive \"an eye for an eye, a tooth for a tooth\"",
+      b: "he will rejoin the house of Israel / they will be cast out and receive \u201can eye for an eye, a tooth for a tooth\u201d",
       c: "he shall surely live / they shall surely die",
       d: "he is now just / they are now wicked",
       e: "his friends will say he is no fun / he will fit in with the wrong crowd",
@@ -299,8 +299,8 @@ const theQuestions = [
   },
   {  // 20
     category: "APOSTLES",
-    beforePart: "The book of Revelation is attributed to the apostle John. The \"Lamb\" mentioned here is Jesus. Complete the following scripture from this book (NAB):",
-    quotePart: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \"Who are these wearing white robes, and where did they come from?\" I said to him, \"My lord, you are the one who knows.\" He said to me, \"These are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\"For this reason they stand before God's throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will _____.\""],
+    beforePart: "The book of Revelation is attributed to the apostle John. The \u201cLamb\u201d mentioned here is Jesus. Complete the following scripture from this book (NAB):",
+    quotePart: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \u201cWho are these wearing white robes, and where did they come from?\u201d I said to him, \u201cMy lord, you are the one who knows.\u201d He said to me, \u201cThese are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\u201cFor this reason they stand before God's throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will _____.\u201d"],
     afterPart: "",
     choices: {
       a: "wipe away every tear from their eyes",
@@ -330,7 +330,7 @@ const theQuestions = [
   {  // 22
     category: "APOSTLES",
     beforePart: "Read the Scripture passage below from the book of James (NAB) and choose which word is represented by the number 1 and which word is represented by the number 2:",
-    quotePart: ["\"You believe that God is one. You do well. Even the demons believe that and tremble. Do you want proof, you ignoramus, that __1__ without __2__ is useless? Was not Abraham our father justified by __2__ when he offered his son Isaac upon the altar? ... Thus the scripture was fulfilled that says, \"Abraham believed God, and it was credited to him as righteousness,\" and he was called \"the friend of God.\" See how a person is justified by __2__ and not by __1__ alone. And in the same way, was not Rahab the harlot also justified by __2__ when she welcomed the messengers and set them out by a different route? For just as a body without a spirit is dead, so also __1__ without __2__ is dead.\"",],
+    quotePart: ["\u201cYou believe that God is one. You do well. Even the demons believe that and tremble. Do you want proof, you ignoramus, that __1__ without __2__ is useless? Was not Abraham our father justified by __2__ when he offered his son Isaac upon the altar? ... Thus the scripture was fulfilled that says, 'Abraham believed God, and it was credited to him as righteousness,' and he was called 'the friend of God.' See how a person is justified by __2__ and not by __1__ alone. And in the same way, was not Rahab the harlot also justified by __2__ when she welcomed the messengers and set them out by a different route? For just as a body without a spirit is dead, so also __1__ without __2__ is dead.\u201d",],
     afterPart: "",
     choices: {
       a: "1 = Christianity, 2 = Judaism",
@@ -345,7 +345,7 @@ const theQuestions = [
   {  // 23
     category: "PAUL",
     beforePart: "Choose the word or phrase that completes this scripture from the book of Hebrews (NIV):",
-    quotePart: ["Now _____ is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for.", "By _____ we understand that the universe was formed at God's command, so that what is seen was not made out of what was visible.", "By _____ Abel brought God a better offering than Cain did. By _____ he was commended as righteous, when God spoke well of his offerings. And by _____ Abel still speaks, even though he is dead.", "By _____ Enoch was taken from this life, so that he did not experience death: \"He could not be found, because God had taken him away.\" For before he was taken, he was commended as one who pleased God. And without _____ it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him.", "By _____ Noah, when warned about things not yet seen, in holy fear built an ark to save his family. By his _____ he condemned the world and became heir of the righteousness that is in keeping with _____."],
+    quotePart: ["Now _____ is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for.", "By _____ we understand that the universe was formed at God's command, so that what is seen was not made out of what was visible.", "By _____ Abel brought God a better offering than Cain did. By _____ he was commended as righteous, when God spoke well of his offerings. And by _____ Abel still speaks, even though he is dead.", "By _____ Enoch was taken from this life, so that he did not experience death: \u201cHe could not be found, because God had taken him away.\u201d For before he was taken, he was commended as one who pleased God. And without _____ it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him.", "By _____ Noah, when warned about things not yet seen, in holy fear built an ark to save his family. By his _____ he condemned the world and became heir of the righteousness that is in keeping with _____."],
     afterPart: "",
     choices: {
       a: "belief",
@@ -380,11 +380,11 @@ const theQuestions = [
     quotePart: ["",],
     afterPart: "",
     choices: {
-      a: "\"For there are many mediators between God and man, Jesus, the apostles, the Popes, the priests, and a believer's parents \u2014 all who teach the believer to follow Christ.\"",
-      b: "\"For there are only two mediators between God and mankind, Jesus and whoever brings a non-believer to faith in Jesus.\"",
-      c: "\"For there are only two mediators between God and a person, Jesus and a man's parents, both of whom give life to a man.",
-      d: "\"For there is one God and one mediator between God and mankind, the man Christ Jesus, who gave himself as a ransom for all people.",
-      e: "\"For there are many mediators, scholars of the law, who only get paid if you get to Heaven.\"",
+      a: "\u201cFor there are many mediators between God and man, Jesus, the apostles, the Popes, the priests, and a believer's parents \u2014 all who teach the believer to follow Christ.\u201d",
+      b: "\u201cFor there are only two mediators between God and mankind, Jesus and whoever brings a non-believer to faith in Jesus.\u201d",
+      c: "\u201cFor there are only two mediators between God and a person, Jesus and a man's parents, both of whom give life to a man.\u201d",
+      d: "\u201cFor there is one God and one mediator between God and mankind, the man Christ Jesus, who gave himself as a ransom for all people.\u201d",
+      e: "\u201cFor there are many mediators, scholars of the law, who only get paid if you get to Heaven.\u201d",
     },
     answer: "d",
   },
@@ -406,7 +406,7 @@ const theQuestions = [
     category: "PAUL",
     hellTheme: true,
     beforePart: "In his first letter to the church at Corinth, the apostle Paul lists some of the things that exclude a person from the kingdom of God. Complete the following scripture (NAB):",
-    quotePart: ["\"Do you not know that the unjust will not inherit the kingdom of God? Do not be deceived; neither _____ will inherit the kingdom of God. That is what some of you used to be; but now you have had yourselves washed, you were justified in the name of the Lord Jesus Christ and in the Spirit of our God.\"",],
+    quotePart: ["\u201cDo you not know that the unjust will not inherit the kingdom of God? Do not be deceived; neither _____ will inherit the kingdom of God. That is what some of you used to be; but now you have had yourselves washed, you were justified in the name of the Lord Jesus Christ and in the Spirit of our God.\u201d",],
     afterPart: "",
     choices: {
       a: "the self-righteous or hypocritical or Pharisee",
@@ -420,7 +420,7 @@ const theQuestions = [
   {  // 28
     category: "PAUL",
     beforePart: "True or False: The apostle Paul made ALL of the following statements about salvation (Heaven) in his letters:",
-    quotePart: ["\"...for if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.\"", "\"For by grace you have been saved through faith, and this is not from you; it is the gift of God; it is not from works, so no one may boast.\"", "\"By your stubbornness and impenitent heart, you are storing up wrath for yourself for the day of wrath and revelation of the just judgment of God, who will repay everyone according to his works: eternal life to those who seek glory, honor, and immortality through perseverance in good works, but wrath and fury to those who selfishly disobey the truth and obey wickedness.\"", "\"Now the works of the flesh are obvious: immortality, impurity, licentiousness, idolatry, sorcery, hatreds, rivalry, jealousy, outbursts of fury, acts of selfishness, dissensions, factions, occasions of envy, drinking bouts, orgies, and the like. I warn you, as I warned you before, that those who do such things will not inherit the kingdom of God.\""],
+    quotePart: ["\u201c...for if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.\u201d", "\u201cFor by grace you have been saved through faith, and this is not from you; it is the gift of God; it is not from works, so no one may boast.\u201d", "\u201cBy your stubbornness and impenitent heart, you are storing up wrath for yourself for the day of wrath and revelation of the just judgment of God, who will repay everyone according to his works: eternal life to those who seek glory, honor, and immortality through perseverance in good works, but wrath and fury to those who selfishly disobey the truth and obey wickedness.\u201d", "\u201cNow the works of the flesh are obvious: immortality, impurity, licentiousness, idolatry, sorcery, hatreds, rivalry, jealousy, outbursts of fury, acts of selfishness, dissensions, factions, occasions of envy, drinking bouts, orgies, and the like. I warn you, as I warned you before, that those who do such things will not inherit the kingdom of God.\u201d"],
     afterPart: "",
     choices: {
       a: "True",
@@ -431,7 +431,7 @@ const theQuestions = [
   {  // 29
     category: "PARABLES",
     beforePart: "Complete Jesus' parable of the mustard seed in the Gospel of Matthew (NAB):",
-    quotePart: ["He proposed another parable to them. \"The kingdom of heaven is like a mustard seed that a person took and sowed in a field. It _____.",],
+    quotePart: ["He proposed another parable to them. \u201cThe kingdom of heaven is like a mustard seed that a person took and sowed in a field. It _____.\u201d",],
     afterPart: "",
     choices: {
       a: "is the plant that yields the highest crop",
@@ -447,7 +447,7 @@ const theQuestions = [
     category: "PARABLES",
     hellTheme: true,
     beforePart: "Complete the following parable from Jesus in the Gospel of Matthew (NIV):",
-    quotePart: ["\"Once again, the kingdom of heaven is like a net that was let down into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore. Then they sat down and collected the good fish in baskets, but threw the bad away. This is how it will be at the end of the age. The angels will come and separate the _____ and throw them into the blazing furnace, where there will be weeping and gnashing of teeth.\"",],
+    quotePart: ["\u201cOnce again, the kingdom of heaven is like a net that was let down into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore. Then they sat down and collected the good fish in baskets, but threw the bad away. This is how it will be at the end of the age. The angels will come and separate the _____ and throw them into the blazing furnace, where there will be weeping and gnashing of teeth.\u201d",],
     afterPart: "",
     choices: {
       a: "non-believers from the believers",
@@ -463,7 +463,7 @@ const theQuestions = [
   {  // 31
     category: "PARABLES",
     beforePart: "Read the following parable from Jesus in the Gospel of Luke (NAB):",
-    quotePart: ["\"Two men went up to the temple to pray, one a Pharisee and the other a tax collector. The Pharisee stood by himself and prayed: 'God, I thank you that I am not like other people\u2014robbers, evildoers, adulterers\u2014or even like this tax collector. I fast twice a week and give a tenth of all I get.'", "\"But the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, 'God, have mercy on me, a sinner.'\""],
+    quotePart: ["\u201cTwo men went up to the temple to pray, one a Pharisee and the other a tax collector. The Pharisee stood by himself and prayed: 'God, I thank you that I am not like other people\u2014robbers, evildoers, adulterers\u2014or even like this tax collector. I fast twice a week and give a tenth of all I get.'", "\u201cBut the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, 'God, have mercy on me, a sinner.'\u201d"],
     afterPart: "Which of the two went home justified?",
     choices: {
       a: "Only the Pharisee because he fasted and did not rob, do evil, or commit adultery \u2014 whereas the tax collector even admitted that he was a sinner.",
@@ -478,7 +478,7 @@ const theQuestions = [
     category: "PARABLES",
     hellTheme: true,
     beforePart: "Match the items in the parable below to who or what Jesus said they are in real life (NAB):",
-    quotePart: ["He proposed another parable to them. \"The kingdom of heaven may be likened to a man who sowed good seed in his field. While everyone was asleep his enemy came and sowed weeds all through the wheat, and then went off. When the crop grew and bore fruit, the weeds appeared as well. The slaves of the householder came to him and said, 'Master, did you not sow good seed in your field? Where have the weeds come from?' He answered, 'An enemy has done this.' His slaves said to him, 'Do you want us to go and pull them up?' He replied, 'No, if you pull up the weeds you might uproot the wheat along with them. Let them grow together until harvest; then at harvest I will say to the harvesters, \"First collect the weeds and tie them in bundles for burning; but gather the wheat into my barn.'",],
+    quotePart: ["He proposed another parable to them. \u201cThe kingdom of heaven may be likened to a man who sowed good seed in his field. While everyone was asleep his enemy came and sowed weeds all through the wheat, and then went off. When the crop grew and bore fruit, the weeds appeared as well. The slaves of the householder came to him and said, 'Master, did you not sow good seed in your field? Where have the weeds come from?' He answered, 'An enemy has done this.' His slaves said to him, 'Do you want us to go and pull them up?' He replied, 'No, if you pull up the weeds you might uproot the wheat along with them. Let them grow together until harvest; then at harvest I will say to the harvesters, 'First collect the weeds and tie them in bundles for burning; but gather the wheat into my barn.'\u201c",],
     afterPart: "The field represents (the) _____ and the weeds represent (the) _____.",
     choices: {
       a: "Church / Pharisees",
@@ -493,7 +493,7 @@ const theQuestions = [
   {  // 33
     category: "PARABLES",
     beforePart: "In the following parable from the Gospel of Matthew (NAB), Jesus compares sinners to stray sheep. Choose the proper ending.",
-    quotePart: ["\"What is your opinion? If a man has a hundred sheep and one of them goes astray, will he not leave the ninety-nine in the hills and go in search of the stray? And if he finds it, amen, I say to you, _____.\"",],
+    quotePart: ["\u201cWhat is your opinion? If a man has a hundred sheep and one of them goes astray, will he not leave the ninety-nine in the hills and go in search of the stray? And if he finds it, amen, I say to you, _____.\u201d",],
     afterPart: "",
     choices: {
       a: "that sheep will be dinner",
