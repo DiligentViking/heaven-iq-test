@@ -649,9 +649,15 @@ function setUserAnswer() {
   if (userSelection) {
     userAnswers[questionNumber] = userSelection;
     userSelection = undefined;
-    console.log(userAnswers);
     return true;
   }
+}
+
+
+function moveToQuestion(num) {
+  window.scrollTo(0, 0);
+  userSelection = userAnswers[num];
+  displayContent(theQuestions[num]);
 }
 
 
@@ -661,24 +667,36 @@ function QuizController() {
   displayContent(theQuestions[questionNumber]);
 
   answerSelection.addEventListener('click', (e) => {
-    userSelection = (e.target.id) ? e.target.id : undefined;  // 'user selected label or nothing'
+    userSelection = (e.target.id) ? e.target.id : undefined;
   });
 
   nextBtn.addEventListener('click', () => {
     const isAnswered = setUserAnswer();
-    if (!isAnswered) console.log('Question skipped!');
+    if (!isAnswered) if (!confirm('Skip Question?')) return;
     questionNumber++;
-    // window.scrollTo(0, 0);  // commenting this out for now so i can get to the btn's faster
-    userSelection = userAnswers[questionNumber];
-    displayContent(theQuestions[questionNumber]);
+    moveToQuestion(questionNumber);
   });
 
   backBtn.addEventListener('click', () => {
-    setUserAnswer();  // so that >whenever< something is answered, it stays answered (i think that is the best UX)
+    const isAnswered = setUserAnswer();
+    if (!isAnswered) console.log('User went back without answering!');
     questionNumber--;
-    // window.scrollTo(0, 0);
-    userSelection = userAnswers[questionNumber];
-    displayContent(theQuestions[questionNumber]);
+    moveToQuestion(questionNumber);
+  });
+
+  document.addEventListener('keydown', (e) => {  // for devs
+    switch (e.key) {
+      case ('ArrowRight'):
+        setUserAnswer();
+        questionNumber++;
+        moveToQuestion(questionNumber);
+        break;
+      case ('ArrowLeft'):
+        setUserAnswer();
+        questionNumber--;
+        moveToQuestion(questionNumber);
+        break;
+    }
   });
 }
 

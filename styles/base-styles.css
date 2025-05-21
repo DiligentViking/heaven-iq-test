@@ -64,7 +64,7 @@ body {
 
 
 .card {
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255, 0.73);
   border: 2px solid white;
   text-align: center;  /* works for all 'inline contents of a block' */
   margin: auto;

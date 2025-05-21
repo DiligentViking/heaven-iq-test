@@ -5,6 +5,7 @@ body {
 
 .container {
   background-image: url("../assets/Quiz/bg1.png");
+  background-position: center;
 }
 
 
