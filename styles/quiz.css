@@ -27,6 +27,8 @@ body {
   content: url("../assets/Quiz/header-decor.png");
   position: absolute;
   left: 0;
+  right: 0;
+  margin: 0 auto;
   top: -18px;
 }
 
@@ -77,6 +79,7 @@ body {
 }
 
 .q-before-part {
+  text-indent: 8px;
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -90,6 +93,7 @@ body {
 }
 
 .fill-in-the-blank {
+  display: inline-block;  /* a lifesaver, suggested by ai */
   text-decoration: underline;
   white-space: pre;
 }
@@ -117,11 +121,11 @@ body {
   text-align: start;
   display: flex;
   align-items: start;
-  gap: 14px;
+  gap: 12px;
 }
 
 .choice + .choice {
-  margin-top: 34px;
+  margin-top: 30px;
 }
 
 input[type="radio"] {
