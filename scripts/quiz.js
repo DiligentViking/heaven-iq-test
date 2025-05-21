@@ -514,6 +514,7 @@ let questionNumber = 0;
 let userSelection;
 
 const container = document.querySelector('.container');
+const card = document.querySelector('.card');
 ////
 const header = document.querySelector('.header');
 const category = document.querySelector('.category');
@@ -597,11 +598,6 @@ function displayContent(question) {
     const lastPara = qQuotePart.querySelector('p + p + p');
     lastPara.setAttribute('style', 'padding: 0 38px; text-align: center; white-space: pre-wrap;')  // another solution is a fixed width and margin-left + margin-right of auto
   }
-  if (question.category == 'OLD TESTAMENT' || question.category == 'JOHN THE BAPTIST') {
-    header.setAttribute('style', 'width: 280px');
-  } else {
-    header.removeAttribute('style');
-  }
   if (questionNumber+1 == 22 || questionNumber+1 == 26) {  // for questions with convoluted numbered blanks
     qQuotePart.textContent = '';
     question.quotePart.forEach((para) => {
@@ -641,6 +637,32 @@ function displayContent(question) {
     const endChoice = answerSelection.querySelector('.choice + .choice');
     topChoice.setAttribute('style', 'width: 100px; margin-left: auto; margin-right: auto;');
     endChoice.setAttribute('style', 'width: 100px; margin-left: auto; margin-right: auto; margin-top: 20px;');
+  }
+  if (question.category == 'OLD TESTAMENT' || question.category == 'JOHN THE BAPTIST') {
+    header.setAttribute('style', 'width: 280px');
+  } else {
+    header.removeAttribute('style');
+  }
+  if (question.hellTheme) {
+    container.classList.add('hell');
+    card.classList.add('hell');  // for q-banner
+    header.classList.add('hell');
+    qBeforePart.classList.add('hell');
+    qQuotePart.classList.add('hell');
+    qAfterPart.classList.add('hell');
+    answerSelection.classList.add('hell');  // for choices
+    nextBtn.querySelector('img').src = './assets/Quiz/Next-hell.png';  // consider changing to background-image (or better yet make it yourself in the css)
+    backBtn.querySelector('img').src = './assets/Quiz/Back-hell.png';
+  } else {
+    container.classList.remove('hell');
+    card.classList.remove('hell');
+    header.classList.remove('hell');
+    qBeforePart.classList.remove('hell');
+    qQuotePart.classList.remove('hell');
+    qAfterPart.classList.remove('hell');
+    answerSelection.classList.remove('hell');
+    nextBtn.querySelector('img').src = './assets/Quiz/next.png';
+    backBtn.querySelector('img').src = './assets/Quiz/back.png';
   }
 }
 
