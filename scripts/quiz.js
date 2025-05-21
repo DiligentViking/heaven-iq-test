@@ -37,7 +37,7 @@ const theQuestions = [
   {  // 2
     category: 'JESUS',
     beforePart: "Complete the following statement from Jesus in the Gospel of Matthew (NIV):",
-    quotePart: ["\u201cNot everyone who says to me, 'Lord, Lord,' will enter the Kingdom of Heaven, but only _____\u201d",],
+    quotePart: ["\u201cNot everyone who says to me, \u2018Lord, Lord,\u2019 will enter the Kingdom of Heaven, but only _____\u201d",],
     afterPart: "",
     choices: {
       a: "those who accept me as their Lord and Savior",
@@ -51,8 +51,8 @@ const theQuestions = [
   {  // 3
     category: "JESUS",
     beforePart: "Read the following passage from the Gospel of Luke (NIV):",
-    quotePart: ["On one occasion an expert in the law stood up to test Jesus. \u201cTeacher,\u201d he asked, \u201cwhat must I do to inherit eternal life?\u201d", "\u201cWhat is written in the law?\u201d he replied. \u201cHow do you read it?\u201d", "He answered, \u201c'Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind'; and, 'Love your neighbor as yourself.'\u201d"],
-    afterPart: "Choose Jesus' Reply to the expert in the law.",
+    quotePart: ["On one occasion an expert in the law stood up to test Jesus. \u201cTeacher,\u201d he asked, \u201cwhat must I do to inherit eternal life?\u201d", "\u201cWhat is written in the law?\u201d he replied. \u201cHow do you read it?\u201d", "He answered, \u201c\u2018Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind\u2019; and, \u2018Love your neighbor as yourself.\u2019\u201d"],
+    afterPart: "Choose Jesus\u2019 Reply to the expert in the law.",
     choices: {
       a: "\u201cThat is false,\u201d Jesus replied. \u201cHow is it you are considered a scholar?\u201d",
       b: "\u201cThat is false,\u201d Jesus replied. \u201cThis teaching is of the Pharisees but not of God.\u201d",
@@ -78,8 +78,8 @@ const theQuestions = [
   {  // 5
     category: "JESUS",
     hellTheme: true,
-    beforePart: "Complete Jesus' words from the Gospel of John (NAB)",
-    quotePart: ["Amen, Amen, I say to you, the hour is coming and is now here when the dead will hear the voice of the Son of God, and those who hear will live. For just as the Father has life in himself, so also he gave his Son the possission of life in himself. And he gave him power to exercise judgment, because he is the Son of Man. Do not be amazed at this, because the hour is coming in which all who are in the tombs will hear his voice and will come out, those who _____ to the resurrection of life, but those who _____ to the resurrection of condemnation.",],  // you may need quotes in places
+    beforePart: "Complete Jesus\u2019 words from the Gospel of John (NAB)",
+    quotePart: ["Amen, Amen, I say to you, the hour is coming and is now here when the dead will hear the voice of the Son of God, and those who hear will live. For just as the Father has life in himself, so also he gave his Son the possession of life in himself. And he gave him power to exercise judgment, because he is the Son of Man. Do not be amazed at this, because the hour is coming in which all who are in the tombs will hear his voice and will come out, those who _____ to the resurrection of life, but those who _____ to the resurrection of condemnation.",],  // you may need quotes in places
     afterPart: "",
     choices: {
       a: "have accepted me as their Lord / are unsaved",
@@ -94,7 +94,7 @@ const theQuestions = [
   },
   {  // 6
     category: "JESUS",
-    beforePart: "Complete the words of Jesus in Luke's Gospel (NAB):",
+    beforePart: "Complete the words of Jesus in Luke\u2019s Gospel (NAB):",
     quotePart: ["He came to Jericho and intended to pass through the town. Now a man there named Zacchaeus, who was a chief tax collector and also a wealthy man, was seeking to see who Jesus was; but he could not see him because of the crowd, for he was short in stature. So he ran ahead and climbed a sycamore tree in order to see Jesus, who was about to pass that way. When he reached the place, Jesus looked up and said to him, \u201cZacchaeus, come down quickly, for today I must stay at your house.\u201d And he came down quickly and received him with joy. When they all saw this, they began to grumble, saying, \u201cHe has gone to stay at the house of a sinner.\u201d But Zacchaeus stood there and said to the Lord, \u201cBehold, half of my possessions, Lord, I shall give to the poor, and if I have extorted anything from anyone I shall repay it four times over.\u201d And Jesus said to him, \u201cToday Salvation has come to this house because this man too is a descendant of Abraham. For the Son of Man has come _____.\u201d",],
     afterPart: "",
     choices: {
@@ -113,7 +113,7 @@ const theQuestions = [
     quotePart: ["\u201cOur Father who art in heaven, \n    Hallowed be thy name. \nThy kingdom come. \nThy will be done on earth \n    as it is in Heaven. \nGive us this day our daily bread; \n    and forgive us our trespasses \n        as we forgive those who \ntrespass against us; \nand lead us not into temptation, \n    but deliver us from evil.\u201d",],  // added four spaces four times, and eight spaces once
     afterPart: "What did Jesus say immediately after this?",
     choices: {
-      a: "\u201cIf you do not treat the Father's name as hallowed, you will not go to heaven.\u201d",
+      a: "\u201cIf you do not treat the Father\u2019s name as hallowed, you will not go to heaven.\u201d",
       b: "\u201cThe kingdom of God will come shortly after my return, for I will be raised to the heavens after I die.\u201d",
       c: "\u201cFor if you forgive men their trespasses, your heavenly father also will forgive you; but if you do not forgive men their trespasses, neither will your Father forgive your trespasses.\u201d",
       d: "\u201cFor my Father will never lead you into temptation that you cannot handle.\u201d",
@@ -152,7 +152,7 @@ const theQuestions = [
   },
   {  // 10
     category: "JESUS",
-    beforePart: "Complete Jesus' words in the following Scripture from the Gospel of Luke (NAB):",
+    beforePart: "Complete Jesus\u2019 words in the following Scripture from the Gospel of Luke (NAB):",
     quotePart: ["\u201cStop judging and you will not be judged. Stop condemning and you will not be condemned. _____ and you will be _____. Give and gifts will be given to you; a good measure, packed together, shaken down, and overflowing, will be poured into your lap. For the measure with which you measure will in return be measured out to you.\u201d",],
     afterPart: "",
     choices: {
@@ -197,7 +197,7 @@ const theQuestions = [
   {  // 13
     category: "JESUS",
     beforePart: "At the Last Supper, Jesus gave his disciples several instructions. Complete his words as they are recorded in the Gospel of John (NAB):",
-    quotePart: ["\u201cI have told you this so that my joy might be in you and your joy might be complete. This is my commandment: love one another _____. No one has greater love than this, to lay down one's life for one's friends. You are my friends if you do what I command you.\u201d",],
+    quotePart: ["\u201cI have told you this so that my joy might be in you and your joy might be complete. This is my commandment: love one another _____. No one has greater love than this, to lay down one\u2019s life for one\u2019s friends. You are my friends if you do what I command you.\u201d",],
     afterPart: "",
     choices: {
       a: "as I have commanded you",
@@ -220,13 +220,13 @@ const theQuestions = [
       b: "is not really saved",
       c: "will only receive half the crowns as the others",
       d: ", I will deny before my heavenly Father",
-      e: "better hope I don't find out about it",
+      e: "better hope I don\u2019t find out about it",
     },
     answer: "d",
   },
   {  // 15
     category: "JESUS",
-    beforePart: "In the Gospel of Matthew (NAB), a rich young man asked Jesus what he must do to gain eternal life. Choose Jesus' reply.",
+    beforePart: "In the Gospel of Matthew (NAB), a rich young man asked Jesus what he must do to gain eternal life. Choose Jesus\u2019 reply.",
     quotePart: ["Now someone approached him and said, \u201cTeacher, what good must I do to gain eternal life?\u201d He answered him, \u201cWhy do you ask me about the good? There is only One who is good. _____.\u201d",],
     afterPart: "",
     choices: {
@@ -256,15 +256,15 @@ const theQuestions = [
     category: "JESUS",
     hellTheme: true,
     beforePart: "Read the following scripture passage from the Gospel of Matthew (NIV) where Jesus talks about judging the nations:",
-    quotePart: ["\u201cWhen the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\u201dThen the King will say to those on his right, 'Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...", "\u201cThen he will say to those on his left, 'Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\u201d"],
+    quotePart: ["\u201cWhen the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\u201dThen the King will say to those on his right, \u2018Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...\u2019", "\u201cThen he will say to those on his left, \u2018Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\u2019\u201d"],
     afterPart: "Who does Jesus say are the sheep and the goats?",
     choices: {
-      a: "The sheep are the ones who gave food, drink, clothes, welcome, and care to \u201cthe least of [Jesus'] brothers and sisters,\u201d the goats are the ones who did not.",
+      a: "The sheep are the ones who gave food, drink, clothes, welcome, and care to \u201cthe least of [Jesus\u2019] brothers and sisters,\u201d the goats are the ones who did not.",
       b: "The goats are the ones who were \u201csaved,\u201d the sheep are the ones who were not saved.",
-      c: "The goats are the ones who \u201cDidn't wander from [Jesus'] flock,\u201d the sheep are the ones that strayed.",
-      d: "The sheep are the ones who confessed Jesus and lived \u201cin the kingdom\u201d of God, the goats are the ones who didn't follow Jesus and lived outside the gates.",
+      c: "The goats are the ones who \u201cDidn\u2019t wander from [Jesus\u2019] flock,\u201d the sheep are the ones that strayed.",
+      d: "The sheep are the ones who confessed Jesus and lived \u201cin the kingdom\u201d of God, the goats are the ones who didn\u2019t follow Jesus and lived outside the gates.",
       e: "The sheep are the ones with soft wool, the goats are the ones with scratchy hair",
-      f: "Jesus didn't say this because there is no such thing as Hell.",
+      f: "Jesus didn\u2019t say this because there is no such thing as Hell.",
     },
     answer: "a",
   },
@@ -285,7 +285,7 @@ const theQuestions = [
   {  // 19
     category: "JOHN THE BAPTIST",
     beforePart: "John the Baptist came to prepare the way for Jesus. Complete the following scripture from the Gospel of Matthew (KJV):",
-    quotePart: ["In those days came John the Baptist, preaching in the wilderness of Judaea,", "And saying, _____ for the kingdom of heaven is at hand.", "For this is he that was spoken of by the prophet Esaias, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.", "And the same John had his raiment of camel's hair, and a leathern girdle about his loins; and his meat was locusts and wild honey.", "Then went out to him Jerusalem, and all Judaea, and all the region round about Jordan, And were baptized of him in Jordan, _____."],
+    quotePart: ["In those days came John the Baptist, preaching in the wilderness of Judaea,", "And saying, _____ for the kingdom of heaven is at hand.", "For this is he that was spoken of by the prophet Esaias, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.", "And the same John had his raiment of camel\u2019s hair, and a leathern girdle about his loins; and his meat was locusts and wild honey.", "Then went out to him Jerusalem, and all Judaea, and all the region round about Jordan, And were baptized of him in Jordan, _____."],
     afterPart: "",
     choices: {
       a: "Listen ye: / and did receive instruction",
@@ -300,7 +300,7 @@ const theQuestions = [
   {  // 20
     category: "APOSTLES",
     beforePart: "The book of Revelation is attributed to the apostle John. The \u201cLamb\u201d mentioned here is Jesus. Complete the following scripture from this book (NAB):",
-    quotePart: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \u201cWho are these wearing white robes, and where did they come from?\u201d I said to him, \u201cMy lord, you are the one who knows.\u201d He said to me, \u201cThese are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\u201cFor this reason they stand before God's throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will _____.\u201d"],
+    quotePart: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \u201cWho are these wearing white robes, and where did they come from?\u201d I said to him, \u201cMy lord, you are the one who knows.\u201d He said to me, \u201cThese are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\u201cFor this reason they stand before God\u2019s throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will _____.\u201d"],
     afterPart: "",
     choices: {
       a: "wipe away every tear from their eyes",
@@ -330,7 +330,7 @@ const theQuestions = [
   {  // 22
     category: "APOSTLES",
     beforePart: "Read the Scripture passage below from the book of James (NAB) and choose which word is represented by the number 1 and which word is represented by the number 2:",
-    quotePart: ["\u201cYou believe that God is one. You do well. Even the demons believe that and tremble. Do you want proof, you ignoramus, that __1__ without __2__ is useless? Was not Abraham our father justified by __2__ when he offered his son Isaac upon the altar? ... Thus the scripture was fulfilled that says, 'Abraham believed God, and it was credited to him as righteousness,' and he was called 'the friend of God.' See how a person is justified by __2__ and not by __1__ alone. And in the same way, was not Rahab the harlot also justified by __2__ when she welcomed the messengers and set them out by a different route? For just as a body without a spirit is dead, so also __1__ without __2__ is dead.\u201d",],
+    quotePart: ["\u201cYou believe that God is one. You do well. Even the demons believe that and tremble. Do you want proof, you ignoramus, that __1__ without __2__ is useless? Was not Abraham our father justified by __2__ when he offered his son Isaac upon the altar? ... Thus the scripture was fulfilled that says, \u2018Abraham believed God, and it was credited to him as righteousness,\u2019 and he was called \u2018the friend of God.\u2019 See how a person is justified by __2__ and not by __1__ alone. And in the same way, was not Rahab the harlot also justified by __2__ when she welcomed the messengers and set them out by a different route? For just as a body without a spirit is dead, so also __1__ without __2__ is dead.\u201d",],
     afterPart: "",
     choices: {
       a: "1 = Christianity, 2 = Judaism",
@@ -345,7 +345,7 @@ const theQuestions = [
   {  // 23
     category: "PAUL",
     beforePart: "Choose the word or phrase that completes this scripture from the book of Hebrews (NIV):",
-    quotePart: ["Now _____ is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for.", "By _____ we understand that the universe was formed at God's command, so that what is seen was not made out of what was visible.", "By _____ Abel brought God a better offering than Cain did. By _____ he was commended as righteous, when God spoke well of his offerings. And by _____ Abel still speaks, even though he is dead.", "By _____ Enoch was taken from this life, so that he did not experience death: \u201cHe could not be found, because God had taken him away.\u201d For before he was taken, he was commended as one who pleased God. And without _____ it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him.", "By _____ Noah, when warned about things not yet seen, in holy fear built an ark to save his family. By his _____ he condemned the world and became heir of the righteousness that is in keeping with _____."],
+    quotePart: ["Now _____ is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for.", "By _____ we understand that the universe was formed at God\u2019s command, so that what is seen was not made out of what was visible.", "By _____ Abel brought God a better offering than Cain did. By _____ he was commended as righteous, when God spoke well of his offerings. And by _____ Abel still speaks, even though he is dead.", "By _____ Enoch was taken from this life, so that he did not experience death: \u201cHe could not be found, because God had taken him away.\u201d For before he was taken, he was commended as one who pleased God. And without _____ it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him.", "By _____ Noah, when warned about things not yet seen, in holy fear built an ark to save his family. By his _____ he condemned the world and became heir of the righteousness that is in keeping with _____."],
     afterPart: "",
     choices: {
       a: "belief",
@@ -380,9 +380,9 @@ const theQuestions = [
     quotePart: ["",],
     afterPart: "",
     choices: {
-      a: "\u201cFor there are many mediators between God and man, Jesus, the apostles, the Popes, the priests, and a believer's parents \u2014 all who teach the believer to follow Christ.\u201d",
+      a: "\u201cFor there are many mediators between God and man, Jesus, the apostles, the Popes, the priests, and a believer\u2019s parents \u2014 all who teach the believer to follow Christ.\u201d",
       b: "\u201cFor there are only two mediators between God and mankind, Jesus and whoever brings a non-believer to faith in Jesus.\u201d",
-      c: "\u201cFor there are only two mediators between God and a person, Jesus and a man's parents, both of whom give life to a man.\u201d",
+      c: "\u201cFor there are only two mediators between God and a person, Jesus and a man\u2019s parents, both of whom give life to a man.\u201d",
       d: "\u201cFor there is one God and one mediator between God and mankind, the man Christ Jesus, who gave himself as a ransom for all people.\u201d",
       e: "\u201cFor there are many mediators, scholars of the law, who only get paid if you get to Heaven.\u201d",
     },
@@ -391,7 +391,7 @@ const theQuestions = [
   {  // 26
     category: "PAUL",
     beforePart: "In his letter to the Romans, the apostle Paul tells the Gentiles they have been accepted by God in place of the Jews who did not believe. Choose the proper words to complete the Scripture (NAB):",
-    quotePart: ["For if God did not spare the natural branches, [perhaps] he will not spare you either. See, then, the __1__ and __2__ of God: __2__ toward those who fell, but God's __1__ to you, provided you remain in his __1__; otherwise you too will be cut off. And they also, if they do not remain in unbelief, will be grafted in, for God is able to graft them in again.",],
+    quotePart: ["For if God did not spare the natural branches, [perhaps] he will not spare you either. See, then, the __1__ and __2__ of God: __2__ toward those who fell, but God\u2019s __1__ to you, provided you remain in his __1__; otherwise you too will be cut off. And they also, if they do not remain in unbelief, will be grafted in, for God is able to graft them in again.",],
     afterPart: "",
     choices: {
       a: "1 = kindness, 2 = severity",
@@ -430,7 +430,7 @@ const theQuestions = [
   },
   {  // 29
     category: "PARABLES",
-    beforePart: "Complete Jesus' parable of the mustard seed in the Gospel of Matthew (NAB):",
+    beforePart: "Complete Jesus\u2019 parable of the mustard seed in the Gospel of Matthew (NAB):",
     quotePart: ["He proposed another parable to them. \u201cThe kingdom of heaven is like a mustard seed that a person took and sowed in a field. It _____.\u201d",],
     afterPart: "",
     choices: {
@@ -463,7 +463,7 @@ const theQuestions = [
   {  // 31
     category: "PARABLES",
     beforePart: "Read the following parable from Jesus in the Gospel of Luke (NAB):",
-    quotePart: ["\u201cTwo men went up to the temple to pray, one a Pharisee and the other a tax collector. The Pharisee stood by himself and prayed: 'God, I thank you that I am not like other people\u2014robbers, evildoers, adulterers\u2014or even like this tax collector. I fast twice a week and give a tenth of all I get.'", "\u201cBut the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, 'God, have mercy on me, a sinner.'\u201d"],
+    quotePart: ["\u201cTwo men went up to the temple to pray, one a Pharisee and the other a tax collector. The Pharisee stood by himself and prayed: \u2018God, I thank you that I am not like other people\u2014robbers, evildoers, adulterers\u2014or even like this tax collector. I fast twice a week and give a tenth of all I get.\u2019", "\u201cBut the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, \u2018God, have mercy on me, a sinner.\u2019\u201d"],
     afterPart: "Which of the two went home justified?",
     choices: {
       a: "Only the Pharisee because he fasted and did not rob, do evil, or commit adultery \u2014 whereas the tax collector even admitted that he was a sinner.",
@@ -474,11 +474,11 @@ const theQuestions = [
     },
     answer: "b",
   },
-  {  // 32
+  {  // `32`
     category: "PARABLES",
     hellTheme: true,
     beforePart: "Match the items in the parable below to who or what Jesus said they are in real life (NAB):",
-    quotePart: ["He proposed another parable to them. \u201cThe kingdom of heaven may be likened to a man who sowed good seed in his field. While everyone was asleep his enemy came and sowed weeds all through the wheat, and then went off. When the crop grew and bore fruit, the weeds appeared as well. The slaves of the householder came to him and said, 'Master, did you not sow good seed in your field? Where have the weeds come from?' He answered, 'An enemy has done this.' His slaves said to him, 'Do you want us to go and pull them up?' He replied, 'No, if you pull up the weeds you might uproot the wheat along with them. Let them grow together until harvest; then at harvest I will say to the harvesters, 'First collect the weeds and tie them in bundles for burning; but gather the wheat into my barn.'\u201c",],
+    quotePart: ["He proposed another parable to them. \u201cThe kingdom of heaven may be likened to a man who sowed good seed in his field. While everyone was asleep his enemy came and sowed weeds all through the wheat, and then went off. When the crop grew and bore fruit, the weeds appeared as well. The slaves of the householder came to him and said, \u2018Master, did you not sow good seed in your field? Where have the weeds come from?\u2019 He answered, \u2018An enemy has done this.\u2019 His slaves said to him, \u2018Do you want us to go and pull them up?\u2019 He replied, \u2018No, if you pull up the weeds you might uproot the wheat along with them. Let them grow together until harvest; then at harvest I will say to the harvesters, \u2018First collect the weeds and tie them in bundles for burning; but gather the wheat into my barn.\u2019\u2019\u201d",],
     afterPart: "The field represents (the) _____ and the weeds represent (the) _____.",
     choices: {
       a: "Church / Pharisees",
@@ -497,7 +497,7 @@ const theQuestions = [
     afterPart: "",
     choices: {
       a: "that sheep will be dinner",
-      b: "that sheep will be branded with a '6 6 6'",
+      b: "that sheep will be branded with a \u20186 6 6\u2019",
       c: "that sheep will be taken back to the flock and considered a black sheep from that day on",
       d: "he will remove it from the flock",
       e: "he rejoices more over it than over the ninety-nine that did not stray",
