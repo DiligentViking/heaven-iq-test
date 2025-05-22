@@ -46,12 +46,13 @@ body {
 
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
+  overflow-x: auto;
 }
 
 .container {  /* background-image, height, padding must be specified in dedicated css file */
   background-size: cover;  /* this worked nicely */
 
-  width: 412px;
+  min-width: 412px;  /* min prevents things from breaking too bad*/
 
   display: flex;
   flex-direction: column;

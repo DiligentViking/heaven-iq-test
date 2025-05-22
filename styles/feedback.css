@@ -14,7 +14,7 @@
 
 
 .entry {
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 1.8px 1.8px 4.2px rgba(0, 0, 0, 0.4);
   width: 100%;  /* so it is like a block element (and respects parent's padding) */
   margin-bottom: 16px;  /* makes it even with side padding */ /* changed it to less */
   position: relative;
