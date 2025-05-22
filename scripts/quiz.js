@@ -681,11 +681,14 @@ function fadeElems() {
   const prevQ = theQuestions[questionNumber-1];  // this needs to be changed to account for if the user is going backwards
   const currQ = theQuestions[questionNumber];
 
+  background.setAttribute('style', 'opacity: 0.5');  // a half-fade
+  setTimeout(() => background.setAttribute('style', 'opacity: 1'), displayDelay * 1000);
+  ////
   if (prevQ.category !== currQ.category) {
     fadeOutIn(category);
   }
   ////
-  // fadeOutIn(progress);
+  // fadeOutIn(progress);  // no fade here
   ////
   fadeOutIn(qBeforePart);  // consider staggering these fades!
   fadeOutIn(qQuotePart);
