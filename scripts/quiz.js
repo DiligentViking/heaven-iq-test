@@ -474,7 +474,7 @@ const theQuestions = [
     },
     answer: "b",
   },
-  {  // `32`
+  {  // 32
     category: "PARABLES",
     hellTheme: true,
     beforePart: "Match the items in the parable below to who or what Jesus said they are in real life (NAB):",
@@ -512,8 +512,11 @@ const userAnswers = [];
 
 let questionNumber = 0;
 let userSelection;
+const displayDelay = 0.4;
 
 const container = document.querySelector('.container');
+const background = document.querySelector('.background');
+////
 const card = document.querySelector('.card');
 ////
 const header = document.querySelector('.header');
@@ -644,7 +647,6 @@ function displayContent(question) {
     header.removeAttribute('style');
   }
   if (question.hellTheme) {
-    container.classList.add('hell');
     card.classList.add('hell');  // for q-banner
     header.classList.add('hell');
     qBeforePart.classList.add('hell');
@@ -654,7 +656,6 @@ function displayContent(question) {
     nextBtn.querySelector('img').src = './assets/Quiz/Next-hell.png';  // consider changing to background-image (or better yet make it yourself in the css)
     backBtn.querySelector('img').src = './assets/Quiz/Back-hell.png';
   } else {
-    container.classList.remove('hell');
     card.classList.remove('hell');
     header.classList.remove('hell');
     qBeforePart.classList.remove('hell');
@@ -664,6 +665,34 @@ function displayContent(question) {
     nextBtn.querySelector('img').src = './assets/Quiz/next.png';
     backBtn.querySelector('img').src = './assets/Quiz/back.png';
   }
+}
+
+
+function fadeElems() {
+  function fadeOutIn(domObj) {
+    domObj.classList.remove('fade-in');
+    domObj.classList.add('fade-out');
+    setTimeout(() => {
+      domObj.classList.remove('fade-out');
+      domObj.classList.add('fade-in');
+    }, displayDelay * 1000);
+  }
+
+  const prevQ = theQuestions[questionNumber-1];  // this needs to be changed to account for if the user is going backwards
+  const currQ = theQuestions[questionNumber];
+
+  if (prevQ.category !== currQ.category) {
+    fadeOutIn(category);
+  }
+  ////
+  // fadeOutIn(progress);
+  ////
+  fadeOutIn(qBeforePart);  // consider staggering these fades!
+  fadeOutIn(qQuotePart);
+  fadeOutIn(qAfterPart);
+  ////
+  const choices = answerSelection.querySelectorAll('.choice');
+  fadeOutIn(answerSelection);
 }
 
 
@@ -677,9 +706,12 @@ function setUserAnswer() {
 
 
 function moveToQuestion(num) {
-  window.scrollTo(0, 0);
+  window.scrollTo({top: 0, behavior: 'smooth'});
   userSelection = userAnswers[num];
-  displayContent(theQuestions[num]);
+  fadeElems();
+  setTimeout(() => {
+    displayContent(theQuestions[num])
+  }, displayDelay * 1000);
 }
 
 
