@@ -22,6 +22,8 @@
 
   --title-text-shadow: 2px 4px 2px var(--text-shadow-color);
   --other-text-shadow: 1px 1px 2px var(--text-shadow-color);
+
+  --transition-timing: 0.4s ease;
 }
 
 
@@ -79,7 +81,7 @@ body {
   cursor: pointer;
   /* width: 102px; */  /* this caused some issues */
   height: 41px;  /* i assume all the images are the same width/height */
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform var(--transition-timing), box-shadow var(--transition-timing);
 }
 
 .btn:hover {

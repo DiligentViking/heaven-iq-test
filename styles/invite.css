@@ -1,0 +1,87 @@
+.container {
+  background-image: url("../assets/Invite_a_Friend/Background.png");
+  background-position-x: 50%;  /* change position a bit to get a few nasty things out and not distracting */ /* worked well */
+  padding: 0 18px;
+  height: 917px;
+}
+
+
+.title {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+
+.entry {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  width: 100%;  /* so it is like a block element (and respects parent's padding) */
+  margin-bottom: 16px;  /* makes it even with side padding */ /* changed it to less */
+  position: relative;
+  display: flex;
+}
+
+.entry input,
+.entry textarea {
+  color: var(--other-text-color);
+  caret-color: var(--other-text-color);
+  font-size: 18px;
+  font-family: arial, sans-serif;  /* it will differentiate the feel */
+  border: none;
+  outline: none;
+  /* pointer-events: none; */
+  flex: 1;
+}
+
+.entry input {
+  padding: 15px;
+}
+
+.entry textarea {
+  resize: none;
+  height: 540px;
+  padding: 12px;
+}
+
+.entry label {
+  font-size: 20px;
+  opacity: 0.90;
+  position: absolute;
+  transition: opacity 0.6s ease-out, visibility 0.6s;  /* ease out is perfect */
+}
+
+.entry input + label {  /* could ha put this in above selector, but for clarity i will do this */
+  top: 13px;  /* 18 seemed a bit too down */
+  left: 62px;
+}
+
+.entry textarea + label {
+  top: 12px;
+  left: 12px;
+}
+
+.entry *:focus + label {
+  opacity: 0;  /* for fade effect; the visibility just poofs */
+  visibility: hidden;  /* so it can't be clicked on [and kinda mess things up] */
+}
+
+.entry *:not(:placeholder-shown) + label {
+  visibility: hidden;
+}
+
+
+.smaller {  /* now a lot of that was just so i could have this span in the label! (and it is also accessible) */
+  font-size: 14px;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 22px;
+}
+
+.buttons button:hover {
+  /* transform: scale(1.05);  /* this makes the image fuzzy */
+  transform: none;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);  /* i've been wanting to have white shadow sometime */ /* also consider no offsets so the shadow is centered */
+}

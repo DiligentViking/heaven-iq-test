@@ -12,7 +12,6 @@ body {
 
 :root {
   --header-before-content: url("../assets/Quiz/header-decor.png");  /* for targeting with js for fade animations i was thinking of doing */
-  --transition-timing: 0.4s ease;
 }
 
 *,

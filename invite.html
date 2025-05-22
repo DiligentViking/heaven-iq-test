@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invite a Friend</title>
+  <link rel="stylesheet" href="./styles/base-styles.css">
+  <link rel="stylesheet" href="./styles/invite.css">
+  <script src="./scripts/invite.js" defer></script>
+</head>
+<body onload="document.body.style.opacity='1'">
+  <div class="container">
+    <h1 class="title">GIVE FEEDBACK</h1>
+
+    <div class="entry">
+      <img src="./assets/Give_Feedback/contact_graphic.svg">
+      <input id="name" type="text" name="name" placeholder=" ">  <!-- have to have dummy placeholders for :placeholder-shown func -->
+      <label for="name">name <span class="smaller">(optional)</span></label>
+    </div>
+
+    <div class="entry">
+      <img src="./assets/Give_Feedback/email_graphic.svg">
+      <input id="email" type="email" name="email" placeholder=" ">  <!-- type email but not required -->
+      <label for="email">email <span class="smaller">(optional)</span></label>
+    </div>
+
+    <div class="entry">
+      <textarea id="comments" name="comments" placeholder=" "></textarea>
+      <label for="comments">comments</label>
+    </div>
+
+    <div class="buttons">
+      <button class="btn cancel"><img src="./assets/Give_Feedback/cancel.png"></button>  <!-- this will need some javascript -->
+      <button class="btn send"><img src="./assets/Give_Feedback/send.png"></button>  <!-- and this will need javascript and some backend -->
+    </div>
+  </div>
+</body>
+</html>
