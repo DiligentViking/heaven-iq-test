@@ -67,7 +67,7 @@ a {
 .start-test h2,
 .how-to img,
 .how-to h2 {
-  transition: transform 0.4s ease;
+  transition: transform 0.7s ease;
 }
 
 .start-test:hover > img,

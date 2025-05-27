@@ -668,21 +668,21 @@ function displayContent(question) {
 }
 
 
-function fadeElems() {
+function fadeElems(delay) {
   function fadeOutIn(domObj) {
     domObj.classList.remove('fade-in');
     domObj.classList.add('fade-out');
-    setTimeout(() => {
+    setTimeout(() => {  // async
       domObj.classList.remove('fade-out');
       domObj.classList.add('fade-in');
-    }, displayDelay * 1000);
+    }, delay * 1000);
   }
 
   const prevQ = theQuestions[questionNumber-1];  // this needs to be changed to account for if the user is going backwards
   const currQ = theQuestions[questionNumber];
 
   background.setAttribute('style', 'opacity: 0.5');  // a half-fade
-  setTimeout(() => background.setAttribute('style', 'opacity: 1'), displayDelay * 1000);
+  setTimeout(() => background.setAttribute('style', 'opacity: 1'), delay * 1000);
   ////
   if (prevQ.category !== currQ.category) {
     fadeOutIn(category);
@@ -696,6 +696,10 @@ function fadeElems() {
   ////
   const choices = answerSelection.querySelectorAll('.choice');
   fadeOutIn(answerSelection);
+
+  return new Promise((resolve) => {
+      setTimeout(resolve, delay * 1000);
+  });
 }
 
 
@@ -711,10 +715,8 @@ function setUserAnswer() {
 function moveToQuestion(num) {
   window.scrollTo({top: 0, behavior: 'smooth'});
   userSelection = userAnswers[num];
-  fadeElems();
-  setTimeout(() => {
-    displayContent(theQuestions[num])
-  }, displayDelay * 1000);
+  fadeElems(displayDelay)
+    .then(() => displayContent(theQuestions[num]));
 }
 
 
