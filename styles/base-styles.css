@@ -38,7 +38,7 @@ body {
 
   -webkit-font-smoothing: antialiased;  /* three css properties that are supposed to increase clarity and consistency of fonts */
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility; /* Improves text rendering */
+  text-rendering: optimizeLegibility;
 
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ body {
   background-color: rgb(255, 255, 255, 0.73);
   border: 2px solid white;
   text-align: center;  /* works for all 'inline contents of a block' */
-  margin: auto;
+  margin: 0 auto;
   width: 350px;
 }
 

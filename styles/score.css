@@ -1,4 +1,99 @@
 .container {
   background-image: url('../assets/Your_Score/Background_-_Closing_Page.png');
-  background-position: 50% 0;
+  background-position: 55% 0;  /* 55 to get abominations out of view */
+}
+
+.card {
+  padding: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.score-container {
+  background: url('../assets/Your_Score/Score_Box.png');
+  box-shadow: 0 4px 6px rgb(73, 46, 22, 0.24);
+  width: 185px;
+  height: 60px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.score {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.book {
+  margin-bottom: 2px;
+}
+
+p {
+  margin-bottom: 18px;
+}
+
+p.if-you-died,
+p.most-important {
+  padding: 0 20px;
+}
+
+.options {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 96px 96px;
+  gap: 20px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.options > button {
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  text-shadow: inherit;
+  box-shadow: 1.8px 2px 3.2px rgb(0, 0, 0, 0.12);
+  border: 3px solid lightgray;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+}
+button.answers {
+  background: rgb(197, 122, 61);
+  border-color: rgb(232, 203, 176);
+}
+button.learn {
+  background: rgb(151, 83, 46);
+  border-color: rgb(213, 187, 170);
+}
+button.invite {
+  background: rgb(185, 124, 92);
+  border-color: rgb(226, 203, 191);
+}
+button.feedback{
+  background: rgb(150, 118, 92);
+  border-color: rgb(213, 200, 191);
+}
+button.sources{
+  background: rgb(219, 176, 125);
+  border-color: rgb(241, 223, 203, 0.8);
+}
+button.about{
+  background: rgb(78, 72, 78);
+  border-color: rgb(184, 182, 184);
+}
+.options > button:hover {
+  transform: translate(0px, -5px);
+  box-shadow: 1.8px 2px 3.2px rgb(0, 0, 0, 0.18);
+}
+
+.home {
+  margin-bottom: 16px;
 }
