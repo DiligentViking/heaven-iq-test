@@ -580,14 +580,10 @@ function displayContent(question) {
   }
 
   /* Special Rules */  // consider cleaning this into a switch or something
-  if (questionNumber === 0) {
+  if (questionNumber+1 == 1) {
     backBtn.setAttribute('style', 'display: none');
-  } else if (questionNumber === theQuestions.length-1) {
-    nextBtn.setAttribute('style', 'display: none');
-    backBtn.setAttribute('style', 'margin: 0');
   } else {
     backBtn.removeAttribute('style');
-    nextBtn.removeAttribute('style');
   }
   if (questionNumber+1 == 7) {
     qQuotePart.setAttribute('style', 'text-align: start; white-space: pre');
@@ -667,6 +663,9 @@ function displayContent(question) {
     nextBtn.querySelector('img').src = './assets/Quiz/next.png';
     backBtn.querySelector('img').src = './assets/Quiz/back.png';
   }
+  if (questionNumber+1 == theQuestions.length) {
+    nextBtn.querySelector('img').src = './assets/Quiz/finish.png';
+  }
 }
 
 
@@ -712,6 +711,13 @@ function setUserAnswer() {
 
 
 function moveToQuestion(num) {
+  if (num+1 > theQuestions.length) {
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = './score.html';
+    }, 1.2 * 1000);
+    return;
+  }
   window.scrollTo({top: 0, behavior: 'smooth'});
   prevQ = currQ;
   currQ = theQuestions[num];
@@ -723,7 +729,7 @@ function moveToQuestion(num) {
 
 function QuizController() {
   // questionNumber = theQuestions.length - 1;
-  questionNumber = 1 - 1;
+  questionNumber = 30 - 1;
   displayContent(theQuestions[questionNumber]);
 
   answerSelection.addEventListener('click', (e) => {
