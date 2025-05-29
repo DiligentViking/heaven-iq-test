@@ -53,6 +53,7 @@ body {
   background-size: cover;  /* this worked nicely */
 
   min-width: 412px;  /* min prevents things from breaking too bad*/
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
