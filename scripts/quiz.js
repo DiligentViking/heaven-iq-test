@@ -458,7 +458,7 @@ const theQuestions = [
       f: "climate deniers from the normal people",
       g: "Jesus did not say this, but corrected one of His followers who did.",
     },
-    answer: "wicked from the righteous",
+    answer: "d",
   },
   {  // 31
     category: "PARABLES",
@@ -508,6 +508,7 @@ const theQuestions = [
 
 
 ////////////////////
+const theAnswers = theQuestions.map((q) => q.answer);
 const userAnswers = [];
 
 let questionNumber = 0;
@@ -574,7 +575,7 @@ function displayContent(question) {
     }
   }
 
-  if (userSelection) {
+  if (userSelection && userSelection !== null) {  // have to do that for some reason
     const prevSelectedRadio = document.getElementById(userSelection);
     prevSelectedRadio.checked = true;
   }
@@ -606,7 +607,7 @@ function displayContent(question) {
       const p = document.createElement('p');
       const re= /__\d__/g;
       const numberedBlanks = paragraph.match(re);
-      console.log(numberedBlanks);
+      // console.log(numberedBlanks);
       if (numberedBlanks) {
         // let lastBlank = 0;
         for (const blank of numberedBlanks) {
@@ -704,14 +705,23 @@ function fadeElems(delay) {
 function setUserAnswer() {
   if (userSelection) {
     userAnswers[questionNumber] = userSelection;
-    userSelection = undefined;
+    console.log(userAnswers);
     return true;
+  } else {
+    userAnswers[questionNumber] = null;
+    console.log(userAnswers);
   }
 }
 
 
 function moveToQuestion(num) {
   if (num+1 > theQuestions.length) {
+    let points = 0;
+    theAnswers.forEach((ans, i) => {
+      if (ans == userAnswers[i]) points++}
+    );
+    const score = Math.round(points / theAnswers.length * 100);
+    localStorage.setItem('score', score);
     document.body.style.opacity = '0';
     setTimeout(() => {
       window.location.href = './score.html';
@@ -729,7 +739,7 @@ function moveToQuestion(num) {
 
 function QuizController() {
   // questionNumber = theQuestions.length - 1;
-  questionNumber = 30 - 1;
+  // questionNumber = 30 - 1; 
   displayContent(theQuestions[questionNumber]);
 
   answerSelection.addEventListener('click', (e) => {

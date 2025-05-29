@@ -103,6 +103,7 @@ a {
   text-shadow: var(--other-text-shadow);
   padding: 0 20px;
   opacity: 0;
+  margin: auto;
 }
 
 .note h2 {
