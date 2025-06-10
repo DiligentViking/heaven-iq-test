@@ -718,8 +718,8 @@ function moveToQuestion(num) {
   if (num+1 > theQuestions.length) {
     let points = 0;
     theAnswers.forEach((ans, i) => {
-      if (ans == userAnswers[i]) points++}
-    );
+      if (ans == userAnswers[i]) points++;
+    });
     const score = Math.round(points / theAnswers.length * 100);
     localStorage.setItem('score', score);
     document.body.style.opacity = '0';
