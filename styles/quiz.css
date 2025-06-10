@@ -122,7 +122,7 @@ body {
 }
 
 .q-quote-part {
-  color: rgb(185, 109, 57);
+  color: var(--quote-text-color);
   text-align: justify;
   font-size: 16px;
   line-height: 1.4;

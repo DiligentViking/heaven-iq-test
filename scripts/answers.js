@@ -26,11 +26,14 @@ function displayAnswers(start, stop) {
     const section = document.createElement('div');
     const header = document.createElement('div');
     const paras = document.createElement('div');
+    section.classList.add('section');
+    header.classList.add('header');
+    paras.classList.add('verses');  // note 'verses'
 
     // Header
     const tag = document.createElement('h2');
     const passage = document.createElement('h2');
-    tag.textContent = `Q${i}`
+    tag.textContent = `q${i}`;
     passage.textContent = theAnswers[i-1].passage;
     header.appendChild(tag);
     header.appendChild(passage);
