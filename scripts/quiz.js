@@ -515,7 +515,7 @@ let questionNumber = 0;
 let currQ = theQuestions[questionNumber];
 let prevQ;
 let userSelection;
-const displayDelay = 0.4;
+const DISPLAY_DELAY = 0.4;
 
 const container = document.querySelector('.container');
 const background = document.querySelector('.background');
@@ -732,7 +732,7 @@ function moveToQuestion(num) {
   prevQ = currQ;
   currQ = theQuestions[num];
   userSelection = userAnswers[num];
-  fadeElems(displayDelay)
+  fadeElems(DISPLAY_DELAY)
     .then(() => displayContent(theQuestions[num]));
 }
 
