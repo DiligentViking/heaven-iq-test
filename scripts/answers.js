@@ -40,9 +40,9 @@ function displayAnswers(start, stop) {
 
     // Paras
     for (const verse of theAnswers[i-1].verses) {
-      const para = document.createElement('p');
-      para.textContent = verse;
-      paras.appendChild(para);
+      const p = document.createElement('p');
+      highlightAnswer(p, verse);
+      paras.appendChild(p);
     }
 
     section.appendChild(header);
@@ -50,6 +50,27 @@ function displayAnswers(start, stop) {
 
     card.append(section);
   }
+}
+
+function highlightAnswer(domObj, paragraph) {  // a helper function that uses regex
+  let para = paragraph;
+
+  const re = /\$.*?\$/;
+  const segmentsToHighlight = para.match(re);
+  
+  for (const segment of segmentsToHighlight) {
+    const theText = segment.slice(1, segment.length-1);
+    const span = document.createElement('span');
+    span.textContent = theText;
+
+    span.classList.add('answer');
+
+    const textBeforeBlank = para.slice(0, para.indexOf(segment));
+    para = para.slice(para.indexOf(segment)+segment.length);
+
+    domObj.append(textBeforeBlank, span);
+  }
+  domObj.append(para);
 }
 
 displayAnswers(1, 1);
