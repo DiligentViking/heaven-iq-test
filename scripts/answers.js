@@ -130,8 +130,8 @@ function highlightAnswer(domObj, paragraph) {  // a helper function that uses re
 }
 
 function displayButtons(pageNum) {
-  const buttons = document.createElement('div');
-  buttons.classList.add('buttons');
+  const buttons = document.querySelector('.buttons');
+  buttons.textContent = '';
 
   const back = document.createElement('button');
   const next = document.createElement('button');
@@ -149,8 +149,6 @@ function displayButtons(pageNum) {
 
   buttons.appendChild(back);
   buttons.appendChild(next);
-
-  document.querySelector('.card').appendChild(buttons);
 }
 
 function displayContent(pageNum) {
