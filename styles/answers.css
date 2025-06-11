@@ -19,7 +19,8 @@
 
 .card {
   background-color: rgb(255, 255, 255, 0.8);
-  padding: 6px 14px 0px 14px;
+  padding: 6px 14px 10px 14px;
+  margin-bottom: 20px;
 }
 
 
@@ -64,6 +65,10 @@
   margin-top: 16px;
 }
 
+span.answer {
+  color: rgb(81, 191, 59);
+}
+
 
 .section:not(:last-child)::after {
   content: url('../assets/Answers/Divider_-_shortened.png');
@@ -73,6 +78,10 @@
 }
 
 
-span.answer {
-  color: rgb(81, 191, 59);
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons .back {
+  margin-right: 22px;
 }

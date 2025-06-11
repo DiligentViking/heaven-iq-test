@@ -56,6 +56,8 @@ const theAnswers = [
 const card = document.querySelector('.card');
 
 function displayAnswers(start, stop) {
+  const main = document.querySelector('main');
+
   for (let i = start; i <= stop; i++) {
     const section = document.createElement('div');
     const header = document.createElement('div');
@@ -86,11 +88,11 @@ function displayAnswers(start, stop) {
       paras.appendChild(p);
     }
 
-    // [finishing]
+    // [end]
     section.appendChild(header);
     section.appendChild(paras);
 
-    card.append(section);
+    main.appendChild(section);
 
     tweakIfSpecial(i);
   }
@@ -128,4 +130,29 @@ function highlightAnswer(domObj, paragraph) {  // a helper function that uses re
   domObj.append(para);
 }
 
+function displayButtons(pageNum) {
+  const buttons = document.createElement('div');
+  buttons.classList.add('buttons');
+
+  const back = document.createElement('button');
+  const next = document.createElement('button');
+  back.classList.add('btn', 'back');
+  next.classList.add('btn', 'next');
+
+  const backImg = document.createElement('img');
+  backImg.src = '../assets/Answers/back.png';
+  back.appendChild(backImg);
+
+  const nextImg = document.createElement('img');
+  if (pageNum == 3) nextImg.src = '../assets/Answers/exit.png';
+  else nextImg.src = '../assets/Answers/next.png';
+  next.appendChild(nextImg);
+
+  buttons.appendChild(back);
+  buttons.appendChild(next);
+
+  card.appendChild(buttons);
+}
+
 displayAnswers(1, 10);
+displayButtons(1);
