@@ -151,7 +151,7 @@ function fadeElem(elem, delay) {  // delay in deciseconds (times the multiplier)
   setTimeout(() => {
     elem.classList.remove('invisible');
     elem.classList.add('visible');
-  }, delay * 100 * 1.25);
+  }, delay * 1.00 * 1.25);
 }
 
 function tweakIfSpecial(qNum, paras) {
@@ -190,41 +190,30 @@ function highlightAnswer(domObj, paragraph) {  // a helper function that uses re
   domObj.append(para);
 }
 
-function displayButtons(pageNum) {
-  const buttons = document.querySelector('.buttons');
-  buttons.textContent = '';
+function displayContent(pageNum) {
+  // Answers to show
+  switch (pageNum) {
+    case 1:
+      displayAnswers(1, 10);
+      break;
+    case 2:
+      displayAnswers(11, 20);
+      break;
+    case 3:
+      displayAnswers(21, 33);
+      break;
+  }
 
-  const back = document.createElement('button');
-  const next = document.createElement('button');
-  back.classList.add('btn', 'back');
-  next.classList.add('btn', 'next');
-
-  const backImg = document.createElement('img');
-  backImg.src = '../assets/Answers/back.png';
-  back.appendChild(backImg);
-
-  const nextImg = document.createElement('img');
+  // Exit button on last page
+  const nextImg = document.querySelector('.next img');
   if (pageNum == 3) nextImg.src = '../assets/Answers/exit.png';
   else nextImg.src = '../assets/Answers/next.png';
-  next.appendChild(nextImg);
-
-  buttons.appendChild(back);
-  buttons.appendChild(next);
-}
-
-function displayContent(pageNum) {
-  if (pageNum == 1) displayAnswers(1, 10);
-  else if (pageNum == 2) displayAnswers(11, 20);
-  else if (pageNum == 3) displayAnswers(21, 33);
-  
-  displayButtons(pageNum);
 }
 
 function Controller() {
   let pageNum = 1;
 
-  displayAnswers(1, 10);
-  displayButtons(pageNum);
+  displayContent(1, 10);
 
   const backBtn = document.querySelector('.back');
   backBtn.addEventListener('click', () => {
