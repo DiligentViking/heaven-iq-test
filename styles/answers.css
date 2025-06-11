@@ -58,16 +58,18 @@ body {
   color: var(--title-text-color);
   font-size: 20px;
   text-shadow: none;
+  transform: scale(0.8);
   position: absolute;
   left: -14px;
   z-index: 0;
-  margin: 3px 0 0 4px;
+  /* margin: 3px 0 0 4px; */
+  margin: 3px 0 0 0;
 }
 .tag::before {
   content: url('../assets/Answers/q-arrow.png');
   position: absolute;
   z-index: -1;
-  /* display: block; */
+  /* margin: -3px 0 0 -4px; */
   margin: -3px 0 0 -4px;
 }
 .tag.longer::before {

@@ -91,7 +91,7 @@ const theAnswers = [
     verses: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \u201cWho are these wearing white robes, and where did they come from?\u201d I said to him, \u201cMy lord, you are the one who knows.\u201d He said to me, \u201cThese are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\u201cFor this reason they stand before God\u2019s throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will $wipe away every tear from their eyes$.\u201d"],
   },
 
-  
+
 ];
 
 //////////
@@ -134,6 +134,7 @@ function displayAnswers(start, stop) {
 
       fadeElem(p, ++fadeDelay);
     }
+    tweakIfSpecial(i, paras);
 
     // [end]
     section.appendChild(header);
@@ -142,8 +143,6 @@ function displayAnswers(start, stop) {
     fadeElem(section, ++fadeDelay);
 
     main.appendChild(section);
-
-    tweakIfSpecial(i);
   }
 }
 
@@ -155,12 +154,16 @@ function fadeElem(elem, delay) {  // delay in deciseconds (times the multiplier)
   }, delay * 100 * 1.25);
 }
 
-function tweakIfSpecial(qNum) {
+function tweakIfSpecial(qNum, paras) {
   switch (qNum) {
     case 7:
-      const seventh = document.querySelectorAll('.verses')[6];
-      const firstP = seventh.querySelector('p');
+      const firstP = paras.firstChild;
       firstP.setAttribute('style', 'white-space: pre');
+      break;
+    case 20:
+      const lastP = paras.lastChild;
+      lastP.setAttribute('style', 'padding: 0 38px; white-space: pre-wrap;');
+      break;
   }
 }
 
