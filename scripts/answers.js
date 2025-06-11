@@ -53,10 +53,9 @@ const theAnswers = [
 
 //////////
 
-const card = document.querySelector('.card');
-
 function displayAnswers(start, stop) {
   const main = document.querySelector('main');
+  main.textContent = '';
 
   for (let i = start; i <= stop; i++) {
     const section = document.createElement('div');
@@ -151,8 +150,34 @@ function displayButtons(pageNum) {
   buttons.appendChild(back);
   buttons.appendChild(next);
 
-  card.appendChild(buttons);
+  document.querySelector('.card').appendChild(buttons);
 }
 
-displayAnswers(1, 10);
-displayButtons(1);
+function displayContent(pageNum) {
+  if (pageNum == 1) displayAnswers(1, 10);
+  else if (pageNum == 2) displayAnswers(11, 20);
+  else if (pageNum == 3) displayAnswers(21, 33);
+  
+  displayButtons(pageNum);
+}
+
+function Controller() {
+  let pageNum = 1;
+
+  displayAnswers(1, 10);
+  displayButtons(pageNum);
+
+  const backBtn = document.querySelector('.back');
+  backBtn.addEventListener('click', () => {
+    if (pageNum == 1) window.location.href = './score.html';
+    else displayContent(--pageNum);
+  });
+
+  const nextBtn = document.querySelector('.next');
+  nextBtn.addEventListener('click', () => {
+    if (pageNum == 3) window.location.href = './score.html';
+    else displayContent(++pageNum);
+  });
+}
+
+Controller();

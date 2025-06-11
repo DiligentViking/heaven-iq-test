@@ -2,7 +2,6 @@
 const score = document.querySelector('.score');
 const scoreVar = localStorage.getItem('score');
 score.textContent = scoreVar;
-localStorage.clear();
 
 // Link option-buttons to referred pages
 const options = document.querySelector('.options');
