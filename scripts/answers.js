@@ -49,6 +49,49 @@ const theAnswers = [
     passage: "Luke 6:37-38 (NAB)",
     verses: ["\u201cStop judging and you will not be judged. Stop condemning and you will not be condemned. $Forgive$ and you will be $forgiven$. Give and gifts will be given to you; a good measure, packed together, shaken down, and overflowing, will be poured into your lap. For the measure with which you measure will in return be measured out to you.\u201d"]
   },
+
+  {  // 11
+    passage: "Matthew 5:27-30 (NIV)",
+    verses: ["\u201c...anyone who looks at a woman lustfully has already committed adultery with her in his heart. If your right eye causes you to stumble, gouge it out and throw it away... And if your right hand causes you to stumble, cut it off and throw it away. $It is better for you to lose one part of your body than for your whole body to go into hell.$\u201d",]
+  },
+  {  // 12
+    passage: "Matthew 16:24-2 (KJV)",
+    verses: ["Then said Jesus unto his disciples, If any man will come after me, let him $deny himself, and take up his cross,$ and follow me.", "For whosoever will save his life shall lose it: and whosoever will lose his life for my sake shall find it.", "For what is a man profited, if he shall gain the whole world, and lose his own soul?"],
+  },
+  {  // 13
+    passage: "John 15:11-14 (NAB)",
+    verses: ["\u201cI have told you this so that my joy might be in you and your joy might be complete. This is my commandment: love one another $as I love you$. No one has greater love than this, to lay down one\u2019s life for one\u2019s friends. You are my friends if you do what I command you.\u201d"]
+  },
+  {  // 14
+    passage: "Matthew 10:32-33 (NAB)",
+    verses: ["\u201cEveryone who acknowledges me before others I will acknowledge before my heavenly Father. But whoever denies me before others, $I will deny before my heavenly Father$.\u201d"]
+  },
+  {  // 15
+    passage: "Matthew 19:16-17 (NAB)",
+    verses: ["Now someone approached him and said, \u201cTeacher, what good must I do to gain eternal life?\u201d He answered him, \u201cWhy do you ask me about the good? There is only One who is good. $If you wish to enter into life, keep the commandments.\u201d"]
+  },
+  {  // 16
+    passage: "Matthew 7:13-14 (NAB)",
+    verses: ["Which statement below did Jesus make about the road to life (Heaven) in the Gospel of Matthew (NAB)?", "$ANSWER: \u201cEnter by the narrow gate; for the gate is wide and the way is easy that leads to destruction, and those who enter by it are many. For the gate is narrow and the way is hard that leads to life, and those who find it are few.\u201d$"]
+  },
+  {  // 17
+    passage: "Matthew 25:31-46 (NIV)",
+    verses: ["\u201cWhen the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\u201dThen the King will say to those on his right, \u2018Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...\u2019", "\u201cThen he will say to those on his left, \u2018Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\u2019\u201d", "Who does Jesus say are the sheep and the goats?", "$ANSWER: The sheep are the ones who gave food, drink, clothes, welcome, and care to \u201cthe least of [Jesus\u2019] brothers and sisters,\u201d the goats are the ones who did not.$"]
+  },
+  {  // 18
+    passage: "Ezekiel 18:20-24 (NAB)",
+    verses: ["\u201cJustice belongs to the just, and wickedness to the wicked.", "But if the wicked man turns away from all the sins he has committed, if he keeps all my statutes and does what is just and right, $he shall surely live$.", "...And if the just turn from justice and do evil, like all the abominations the wicked do... $they shall die$.\u201d"]
+  },
+  {  // 19
+    passage: "Matthew 3:1-6 (KJV)",
+    verses: ["In those days came John the Baptist, preaching in the wilderness of Judaea,", "And saying, $Repent ye:$ for the kingdom of heaven is at hand.", "For this is he that was spoken of by the prophet Esaias, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.", "And the same John had his raiment of camel\u2019s hair, and a leathern girdle about his loins; and his meat was locusts and wild honey.", "Then went out to him Jerusalem, and all Judaea, and all the region round about Jordan, And were baptized of him in Jordan, $confessing their sins$."]
+  },
+  {  // 20
+    passage: "Revelation 7:9-17 (NAB)",
+    verses: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \u201cWho are these wearing white robes, and where did they come from?\u201d I said to him, \u201cMy lord, you are the one who knows.\u201d He said to me, \u201cThese are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\u201cFor this reason they stand before God\u2019s throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will $wipe away every tear from their eyes$.\u201d"],
+  },
+
+  
 ];
 
 //////////
@@ -56,6 +99,8 @@ const theAnswers = [
 function displayAnswers(start, stop) {
   const main = document.querySelector('main');
   main.textContent = '';
+
+  let fadeDelay = 0;
 
   for (let i = start; i <= stop; i++) {
     const section = document.createElement('div');
@@ -79,22 +124,35 @@ function displayAnswers(start, stop) {
     header.appendChild(tag);
     header.appendChild(passage);
 
+    fadeElem(header, ++fadeDelay);
+
     // Paras
     for (const verse of theAnswers[i-1].verses) {
       const p = document.createElement('p');
       highlightAnswer(p, verse);
-
       paras.appendChild(p);
+
+      fadeElem(p, ++fadeDelay);
     }
 
     // [end]
     section.appendChild(header);
     section.appendChild(paras);
 
+    fadeElem(section, ++fadeDelay);
+
     main.appendChild(section);
 
     tweakIfSpecial(i);
   }
+}
+
+function fadeElem(elem, delay) {  // delay in deciseconds (times the multiplier)
+  elem.classList.add('invisible');
+  setTimeout(() => {
+    elem.classList.remove('invisible');
+    elem.classList.add('visible');
+  }, delay * 100 * 1.25);
 }
 
 function tweakIfSpecial(qNum) {
