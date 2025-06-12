@@ -91,7 +91,58 @@ const theAnswers = [
     verses: ["After this I had a vision of a great multitude, which no one could count, from every nation, race, people, and tongue. They stood before the throne and before the Lamb, wearing white robes and holding palm branches in their hands....", "Then one of the elders spoke up and said to me, \u201cWho are these wearing white robes, and where did they come from?\u201d I said to him, \u201cMy lord, you are the one who knows.\u201d He said to me, \u201cThese are the ones who have survived the time of great distress; they have washed their robes and made them white in the blood of the lamb.", "\u201cFor this reason they stand before God\u2019s throne and worship him day and night in his temple. \nThe one who sits on the throne will shelter them. \nThey will not hunger or thirst anymore, \nnor will the sun or any heat strike them. \nFor the Lamb who is in the center of the throne will shepherd them and lead them to springs of life-giving water, \nand God will $wipe away every tear from their eyes$.\u201d"],
   },
 
-
+  {  // 21
+    passage: "Revelation 21:1-4 (NAB)",
+    verses: ["The book of Revelation is attributed to the apostle John. Choose three things that John, in this book, says are NOT in Heaven (NAB):", "$ANSWER: death, mourning, pain$"]
+  },
+  {  // 22
+    passage: "James 2:19-26 (NAB)",
+    verses: ["\u201cYou believe that God is one. You do well. Even the demons believe that and tremble. Do you want proof, you ignoramus, that $faith$ without $works$ is useless? Was not Abraham our father justified by $works$ when he offered his son Isaac upon the altar? ... Thus the scripture was fulfilled that says, \u2018Abraham believed God, and it was credited to him as righteousness,\u2019 and he was called \u2018the friend of God.\u2019 See how a person is justified by $works$ and not by $faith$ alone. And in the same way, was not Rahab the harlot also justified by $works$ when she welcomed the messengers and set them out by a different route? For just as a body without a spirit is dead, so also $faith$ without $works$ is dead.\u201d"]
+  },
+  {  // 23
+    passage: "Hebrews 11:1-7 (NIV)",
+    verses: ["Now $faith$ is confidence in what we hope for and assurance about what we do not see. This is what the ancients were commended for.", "By $faith$ we understand that the universe was formed at God\u2019s command, so that what is seen was not made out of what was visible.", "By $faith$ Abel brought God a better offering than Cain did. By $faith$ he was commended as righteous, when God spoke well of his offerings. And by $faith$ Abel still speaks, even though he is dead.", "By $faith$ Enoch was taken from this life, so that he did not experience death: \u201cHe could not be found, because God had taken him away.\u201d For before he was taken, he was commended as one who pleased God. And without $faith$ it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him.", "By $faith$ Noah, when warned about things not yet seen, in holy fear built an ark to save his family. By his $faith$ he condemned the world and became heir of the righteousness that is in keeping with $faith$."]
+  },
+  {  // 24
+    passage: "1 Corinthians 2:9-10 (KJV)",
+    verses: ["But as it is written, Eye hath not seen, nor ear heard, neither have entered into the heart of man, $the things which God hath prepared for them that love him$.", "But God hath revealed them unto us by his Spirit: for the Spirit searcheth all things, yea, the deep things of God."]
+  },
+  {  // 25
+    passage: "1 Timothy 2:5-6 (NIV)",
+    verses: ["Choose the correct saying from the apostle Paul in his first letter to Timothy (NIV):", "$ANSWER: \u201cFor there is one God and one mediator between God and mankind, the man Christ Jesus, who gave himself as a ransom for all people.\u201d$"]
+  },
+  {  // 26
+    passage: "Romans 11:21-23 (NAB)",
+    verses: ["For if God did not spare the natural branches, [perhaps] he will not spare you either. See, then, the $kindness$ and $severity$ of God: $severity$ toward those who fell, but God\u2019s $kindness$ to you, provided you remain in his $kindness$; otherwise you too will be cut off. And they also, if they do not remain in unbelief, will be grafted in, for God is able to graft them in again."]
+  },
+  {  // 27
+    passage: "1 Corinthians 6:9-11 (NAB)",
+    verses: ["\u201cDo you not know that the unjust will not inherit the kingdom of God? Do not be deceived; neither $fornicators nor idolaters nor adulterers nor boy prostitutes nor sodomites nor thieves nor the greedy nor drunkards nor slanderers nor robbers$ will inherit the kingdom of God. That is what some of you used to be; but now you have had yourselves washed, you were justified in the name of the Lord Jesus Christ and in the Spirit of our God.\u201d"]
+  },
+  {  // 28
+    passage: "Romans 10:9, Ephesians 2:8-9, Romans 2:5-8, Galatians 5:19-21 (NAB)",
+    verses: ["True or False: The apostle Paul made ALL of the following statements about salvation (Heaven) in his letters:", "\u201c...for if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.\u201d", "\u201cFor by grace you have been saved through faith, and this is not from you; it is the gift of God; it is not from works, so no one may boast.\u201d", "\u201cBy your stubbornness and impenitent heart, you are storing up wrath for yourself for the day of wrath and revelation of the just judgment of God, who will repay everyone according to his works: eternal life to those who seek glory, honor, and immortality through perseverance in good works, but wrath and fury to those who selfishly disobey the truth and obey wickedness.\u201d", "\u201cNow the works of the flesh are obvious: immortality, impurity, licentiousness, idolatry, sorcery, hatreds, rivalry, jealousy, outbursts of fury, acts of selfishness, dissensions, factions, occasions of envy, drinking bouts, orgies, and the like. I warn you, as I warned you before, that those who do such things will not inherit the kingdom of God.\u201d", "$ANSWER: True$"]
+  },
+  {  // 29
+    passage: "Matthew 13:31-32 (NAB)",
+    verses: ["He proposed another parable to them. \u201cThe kingdom of heaven is like a mustard seed that a person took and sowed in a field. It $is the smallest of all the seeds, yet when full-grown it is the largest of plants$.\u201d"]
+  },
+  {  // 30
+    passage: "Matthew 13:47-50 (NIV)",
+    verses: ["\u201cOnce again, the kingdom of heaven is like a net that was let down into the lake and caught all kinds of fish. When it was full, the fishermen pulled it up on the shore. Then they sat down and collected the good fish in baskets, but threw the bad away. This is how it will be at the end of the age. The angels will come and separate the $wicked from the righteous$ and throw them into the blazing furnace, where there will be weeping and gnashing of teeth.\u201d"]
+  },
+  {  // 31
+    passage: "Luke 18:10-14 (NIV)",
+    verses: ["\u201cTwo men went up to the temple to pray, one a Pharisee and the other a tax collector. The Pharisee stood by himself and prayed: \u2018God, I thank you that I am not like other people\u2014robbers, evildoers, adulterers\u2014or even like this tax collector. I fast twice a week and give a tenth of all I get.\u2019", "\u201cBut the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, \u2018God, have mercy on me, a sinner.\u2019\u201d", "Which of the two people (the Pharisee or the tax collector) went home justified?", "$ANSWER: Only the tax collector because he humbled himself whereas the pharisee exalted himself.$"]
+  },
+  {  // 32
+    passage: "Matthew 13:24-30 (NAB)",
+    verses: ["He proposed another parable to them. \u201cThe kingdom of heaven may be likened to a man who sowed good seed in his field. While everyone was asleep his enemy came and sowed weeds all through the wheat, and then went off. When the crop grew and bore fruit, the weeds appeared as well. The slaves of the householder came to him and said, \u2018Master, did you not sow good seed in your field? Where have the weeds come from?\u2019 He answered, \u2018An enemy has done this.\u2019 His slaves said to him, \u2018Do you want us to go and pull them up?\u2019 He replied, \u2018No, if you pull up the weeds you might uproot the wheat along with them. Let them grow together until harvest; then at harvest I will say to the harvesters, \u2018First collect the weeds and tie them in bundles for burning; but gather the wheat into my barn.\u2019\u2019\u201d", "the field represents (the) $world$ and the weeds represent (the) $evildoers$."],
+  },
+  {  // 33
+    passage: "Matthew 18:12-13 (NAB)",
+    verses: ["\u201cWhat is your opinion? If a man has a hundred sheep and one of them goes astray, will he not leave the ninety-nine in the hills and go in search of the stray? And if he finds it, amen, I say to you, $he rejoices more over it than over the ninety-nine that did not stray$.\u201d"]
+  }
 ];
 
 //////////
@@ -151,7 +202,7 @@ function fadeElem(elem, delay) {  // delay in deciseconds (times the multiplier)
   setTimeout(() => {
     elem.classList.remove('invisible');
     elem.classList.add('visible');
-  }, delay * 1.00 * 1.25);
+  }, delay * 100 * 1.25);
 }
 
 function tweakIfSpecial(qNum, paras) {
@@ -191,6 +242,8 @@ function highlightAnswer(domObj, paragraph) {  // a helper function that uses re
 }
 
 function displayContent(pageNum) {
+  // window.scrollTo({top: 0, behavior: 'smooth'});
+
   // Answers to show
   switch (pageNum) {
     case 1:
