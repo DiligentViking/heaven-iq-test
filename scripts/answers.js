@@ -242,7 +242,7 @@ function highlightAnswer(domObj, paragraph) {  // a helper function that uses re
 }
 
 function displayContent(pageNum) {
-  // window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({top: 0, behavior: 'smooth'});
 
   // Answers to show
   switch (pageNum) {
@@ -259,8 +259,8 @@ function displayContent(pageNum) {
 
   // Exit button on last page
   const nextImg = document.querySelector('.next img');
-  if (pageNum == 3) nextImg.src = '../assets/Answers/exit.png';
-  else nextImg.src = '../assets/Answers/next.png';
+  if (pageNum == 3) nextImg.src = './assets/Answers/exit.png';
+  else nextImg.src = './assets/Answers/next.png';
 }
 
 function Controller() {
