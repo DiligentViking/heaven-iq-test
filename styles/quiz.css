@@ -6,12 +6,13 @@ body {
 
 .image-loader {
   background-image:
-    url('../assets/Quiz/header-decor-hell.png'),
+    url('../assets/Quiz/Hell_BG_1.png'),
+    url('../assets/Quiz/header_decor_-_hell.png'),
     url('../assets/Quiz/Number_-_Banner_Hell.png');  /* consider the buttons, too */
 }
 
 :root {
-  --header-before-content: url("../assets/Quiz/header-decor.png");  /* for targeting with js for fade animations i was thinking of doing */
+  --header-before-content: url("../assets/Quiz/header_decor.png");  /* for targeting with js for fade animations i was thinking of doing */
 }
 
 *,
@@ -56,7 +57,7 @@ body {
 
   position: relative;
 
-  transition: background-color var(--transition-timing);
+  transition: background-color 0.8s;
 }
 
 .header::before {
@@ -221,7 +222,7 @@ input[type="radio"]:checked::before {
 }
 
 .header.hell::before {
-  content: url('../assets/Quiz/header-decor-hell.png');
+  content: url('../assets/Quiz/header_decor_-_hell.png');
 }
 
 .card.hell::before {
@@ -236,4 +237,14 @@ input[type="radio"]:checked::before {
 .q-after-part.hell,
 .answer-selection.hell {
   color: rgb(77,39,10);
+}
+
+.header.fade-out,
+.card.fade-out {
+  opacity: 1;
+}
+
+.header.fade-out::before,
+.card.fade-out::before {
+  opacity: 0;
 }

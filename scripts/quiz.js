@@ -515,6 +515,7 @@ let questionNumber = 0;
 let currQ = theQuestions[questionNumber];
 let prevQ;
 let userSelection;
+let alertUserOnLeave = true;
 const DISPLAY_DELAY = 0.4;
 
 const container = document.querySelector('.container');
@@ -646,6 +647,7 @@ function displayContent(question) {
     header.removeAttribute('style');
   }
   if (question.hellTheme) {
+    background.src = './assets/Quiz/Hell_BG_1.png';
     card.classList.add('hell');  // for q-banner
     header.classList.add('hell');
     qBeforePart.classList.add('hell');
@@ -655,6 +657,7 @@ function displayContent(question) {
     nextBtn.querySelector('img').src = './assets/Quiz/Next-hell.png';  // consider changing to background-image (or better yet make it yourself in the css)
     backBtn.querySelector('img').src = './assets/Quiz/Back-hell.png';
   } else {
+    background.src = './assets/Quiz/bg1.png';
     card.classList.remove('hell');
     header.classList.remove('hell');
     qBeforePart.classList.remove('hell');
@@ -670,31 +673,39 @@ function displayContent(question) {
 }
 
 
-function fadeElems(delay) {
-  function fadeOutIn(domObj) {
-    domObj.classList.remove('fade-in');
-    domObj.classList.add('fade-out');
-    setTimeout(() => {  // async
-      domObj.classList.remove('fade-out');
-      domObj.classList.add('fade-in');
-    }, delay * 1000);
-  }
+function fadeOutIn(domObj, delay) {
+  domObj.classList.remove('fade-in');
+  domObj.classList.add('fade-out');
+  setTimeout(() => {  // async
+    domObj.classList.remove('fade-out');
+    domObj.classList.add('fade-in');
+  }, delay * 1000);
+}
 
-  background.setAttribute('style', 'opacity: 0.5');  // a half-fade
+
+function fadeElems(delay) {
+  const isHellTransition = (prevQ.hellTheme !== currQ.hellTheme);
+  ////
+  background.setAttribute('style', `opacity: ${isHellTransition ? 0 : 0.5}`);  // a half-fade
   setTimeout(() => background.setAttribute('style', 'opacity: 1'), delay * 1000);
   ////
+  if (isHellTransition) {  // this is to target pseudo-elements (see css magic in file)
+    fadeOutIn(header, delay);
+    fadeOutIn(card, delay);
+  }
+  ////
   if (prevQ.category !== currQ.category) {
-    fadeOutIn(category);
+    fadeOutIn(category, delay);
   }
   ////
   // fadeOutIn(progress);  // no fade here
   ////
-  fadeOutIn(qBeforePart);  // consider staggering these fades!
-  fadeOutIn(qQuotePart);
-  fadeOutIn(qAfterPart);
+  fadeOutIn(qBeforePart, delay);  // consider staggering these fades!
+  fadeOutIn(qQuotePart, delay);
+  fadeOutIn(qAfterPart, delay);
   ////
   const choices = answerSelection.querySelectorAll('.choice');
-  fadeOutIn(answerSelection);
+  fadeOutIn(answerSelection, delay);
 
   return new Promise((resolve) => {
     setTimeout(resolve, delay * 1000);
@@ -723,6 +734,7 @@ function moveToQuestion(num) {
     const score = Math.round(points / theAnswers.length * 100);
     localStorage.setItem('score', score);
     document.body.style.opacity = '0';
+    alertUserOnLeave = false;
     setTimeout(() => {
       window.location.href = './score.html';
     }, 1.2 * 1000);
@@ -739,7 +751,7 @@ function moveToQuestion(num) {
 
 function QuizController() {
   // questionNumber = theQuestions.length - 1;
-  // questionNumber = 30 - 1; 
+  questionNumber = 30 - 1; 
   displayContent(theQuestions[questionNumber]);
 
   answerSelection.addEventListener('click', (e) => {
@@ -772,6 +784,13 @@ function QuizController() {
         questionNumber--;
         moveToQuestion(questionNumber);
         break;
+    }
+  });
+
+  window.addEventListener('beforeunload', function (event) {
+    if (alertUserOnLeave) {
+      event.preventDefault();
+      event.returnValue = '';
     }
   });
 }
