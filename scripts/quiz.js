@@ -751,7 +751,7 @@ function moveToQuestion(num) {
 
 function QuizController() {
   // questionNumber = theQuestions.length - 1;
-  questionNumber = 30 - 1; 
+  // questionNumber = 30 - 1;
   displayContent(theQuestions[questionNumber]);
 
   answerSelection.addEventListener('click', (e) => {

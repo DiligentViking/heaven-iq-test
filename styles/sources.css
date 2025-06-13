@@ -1,0 +1,30 @@
+.container {
+  background-image: url('../assets/Background2.png');
+  background-position: 50% 0;
+}
+
+.title {
+  font-size: 40px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.card > img {  /* it would effect the buttons */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.card p {
+  margin-bottom: 22px;
+  line-height: 1.4;
+  text-indent: 18px;
+}
+
+.card .btn {
+  margin-bottom: 16px;
+}
