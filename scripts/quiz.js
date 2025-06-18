@@ -510,13 +510,22 @@ const theQuestions = [
 ////////////////////
 const theAnswers = theQuestions.map((q) => q.answer);
 const userAnswers = [];
+////
+const questionTimes = [];
 
 let questionNumber = 0;
 let currQ = theQuestions[questionNumber];
 let prevQ;
 let userSelection;
+////
 let alertUserOnLeave = true;
+////
 const DISPLAY_DELAY = 0.4;
+////
+const startTime = Date.now();
+let viewTime = Date.now();
+
+let eHeckCounter = 0;
 
 const container = document.querySelector('.container');
 const background = document.querySelector('.background');
@@ -582,26 +591,26 @@ function displayContent(question) {
   }
 
   /* Special Rules */  // consider cleaning this into a switch or something
-  if (questionNumber+1 == 1) {
+  if (questionNumber+1 === 1) {
     backBtn.setAttribute('style', 'display: none');
   } else {
     backBtn.removeAttribute('style');
   }
-  if (questionNumber+1 == 7) {
+  if (questionNumber+1 === 7) {
     qQuotePart.setAttribute('style', 'text-align: start; white-space: pre');
   } else {
     qQuotePart.removeAttribute('style');
   }
-  if (questionNumber+1 == 14) {
+  if (questionNumber+1 === 14) {
     qBeforePart.setAttribute('style', 'hyphens: auto; overflow-wrap: break-word')
   } else {
     qBeforePart.removeAttribute('style');
   }
-  if (questionNumber+1 == 20) {
+  if (questionNumber+1 === 20) {
     const lastPara = qQuotePart.querySelector('p + p + p');
     lastPara.setAttribute('style', 'padding: 0 38px; text-align: center; white-space: pre-wrap;')  // another solution is a fixed width and margin-left + margin-right of auto
   }
-  if (questionNumber+1 == 22 || questionNumber+1 == 26) {  // for questions with convoluted numbered blanks
+  if (questionNumber+1 === 22 || questionNumber+1 === 26) {  // for questions with convoluted numbered blanks
     qQuotePart.textContent = '';
     question.quotePart.forEach((para) => {
       let paragraph = para;
@@ -627,7 +636,7 @@ function displayContent(question) {
       qQuotePart.appendChild(p);
     });
   }
-  if (questionNumber+1 == 28) {
+  if (questionNumber+1 === 28) {
     const wordToBold = 'ALL';  // rather flexible, too
     qBeforePart.textContent = '';
     const strong = document.createElement('strong');
@@ -641,7 +650,7 @@ function displayContent(question) {
     topChoice.setAttribute('style', 'width: 100px; margin-left: auto; margin-right: auto;');
     endChoice.setAttribute('style', 'width: 100px; margin-left: auto; margin-right: auto; margin-top: 20px;');
   }
-  if (question.category == 'OLD TESTAMENT' || question.category == 'JOHN THE BAPTIST') {
+  if (question.category === 'OLD TESTAMENT' || question.category === 'JOHN THE BAPTIST') {
     header.setAttribute('style', 'width: 280px');
   } else {
     header.removeAttribute('style');
@@ -667,7 +676,7 @@ function displayContent(question) {
     nextBtn.querySelector('img').src = './assets/Quiz/next.png';
     backBtn.querySelector('img').src = './assets/Quiz/back.png';
   }
-  if (questionNumber+1 == theQuestions.length) {
+  if (questionNumber+1 === theQuestions.length) {
     nextBtn.querySelector('img').src = './assets/Quiz/finish.png';
   }
 }
@@ -685,7 +694,7 @@ function fadeOutIn(domObj, delay) {
 
 function fadeElems(delay) {
   const isHellTransition = (prevQ.hellTheme !== currQ.hellTheme);
-  ////
+
   background.setAttribute('style', `opacity: ${isHellTransition ? 0 : 0.5}`);  // a half-fade
   setTimeout(() => background.setAttribute('style', 'opacity: 1'), delay * 1000);
   ////
@@ -729,23 +738,91 @@ function moveToQuestion(num) {
   if (num+1 > theQuestions.length) {
     let points = 0;
     theAnswers.forEach((ans, i) => {
-      if (ans == userAnswers[i]) points++;
+      if (ans === userAnswers[i]) points++;
     });
     const score = Math.round(points / theAnswers.length * 100);
     localStorage.setItem('score', score);
+    ////
     document.body.style.opacity = '0';
+    emailTestResult();
     alertUserOnLeave = false;
     setTimeout(() => {
       window.location.href = './score.html';
     }, 1.2 * 1000);
     return;
   }
+
   window.scrollTo({top: 0, behavior: 'smooth'});
+  ////
   prevQ = currQ;
   currQ = theQuestions[num];
   userSelection = userAnswers[num];
+  ////
+  questionTimes[num-1] = Math.round((Date.now() - viewTime) / 1000);
+  viewTime = Date.now();
+  ////
   fadeElems(DISPLAY_DELAY)
     .then(() => displayContent(theQuestions[num]));
+}
+
+
+function emailTestResult(prematureExit=true) {
+  const numQsViewed = userAnswers.length;
+  const numQsAnswered = userAnswers.reduce((acc, curr) => {return (curr) ? acc + 1 : acc}, 0);
+  const numQsSkipped = numQsViewed - numQsAnswered;
+  ////
+  const numCorrect = theAnswers.reduce((acc, curr, index) => {return (curr === userAnswers[index]) ? acc + 1 : acc}, 0);
+
+  let exitMsg = (prematureExit)
+    ? `User exited test on question ${questionNumber}.`
+    : `User has completed the test with a score of ${localStorage.getItem('score')}!`;
+  ////
+  const ipAddress = null;
+  const location = null;
+  ////
+  const timeTaken = `${Math.round((Date.now() - startTime) / 1000 / 60)} minutes`;
+  ////
+  const viewed = numQsViewed;
+  const answered = numQsAnswered;
+  const correct = numCorrect;
+  ////
+  const briefAnswerArr = [];
+  const detailedAnswerArr = [];
+  for (let i = 0; i < theQuestions.length; i++) {
+    const guess = userAnswers[i];
+    const right = theAnswers[i];
+    const extraSpace = (i+1 < 10) ? ' ' : '';
+    if (guess === null) briefAnswerArr.push(`Q${i+1}:${extraSpace} N  SKIPPED`);
+    else if (guess === undefined) briefAnswerArr.push(`Q${i+1}:${extraSpace} `);
+    else if (guess === right) briefAnswerArr.push(`Q${i+1}:${extraSpace} ${guess}  RIGHT`);
+    else briefAnswerArr.push(`Q${i+1}:${extraSpace} ${guess}  WRONG`);
+    //
+    const format = (text) => {
+      if (!text) return '';
+      let slicedText = text.slice(0, 30);
+      if (slicedText.length > 29) slicedText += '...';
+      return `"${slicedText}"`;
+    }
+    if (guess !== undefined) detailedAnswerArr.push(
+      `Q${i+1}:`,
+      `  Quote Content: ${format(theQuestions[i].quotePart[0])}`,
+      `  Guess: ${guess}, ${format(theQuestions[i].choices[guess])}`,
+      `  Answer: ${right}, ${format(theQuestions[i].choices[right])}`,
+      `  Time Spent: ${questionTimes[i]}s`,
+      ``,
+    );
+  }
+  const briefAnswerList = briefAnswerArr.join('\n');
+  const detailedAnswerList = detailedAnswerArr.join('\n');
+
+  const eHeckKey = (eHeckCounter++ >= 2  && prematureExit) ? "0" : "976s8VSowS8o2DZad";  // had to make this heck hack
+  const dynamicVars = {exitMsg, ipAddress, location, timeTaken, viewed, answered, correct, briefAnswerList, detailedAnswerList};
+  emailjs.send("service_6eqxq1m", "template_uory4an", dynamicVars, {publicKey: eHeckKey})
+    .then(() => {
+      console.log('SUCCESS!');
+    }, (error) => {
+      console.log('FAILED: ', error);
+    });
 }
 
 
@@ -789,10 +866,16 @@ function QuizController() {
 
   window.addEventListener('beforeunload', function (event) {
     if (alertUserOnLeave) {
+      emailTestResult(prematureExit = true);  // a bit of a hack
       event.preventDefault();
       event.returnValue = '';
     }
   });
+
+  // window.addEventListener('visibilitychange', (event) => {
+  //   console.log('unloading!!');
+  //   alert('hey!');
+  // });
 }
 
 
