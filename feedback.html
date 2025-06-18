@@ -6,6 +6,10 @@
   <title>Give Feedback</title>
   <link rel="stylesheet" href="./styles/base-styles.css">
   <link rel="stylesheet" href="./styles/feedback.css">
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
   <script src="./scripts/feedback.js" defer></script>
 </head>
 <body onload="document.body.style.opacity='1'">
@@ -25,14 +29,16 @@
     </div>
 
     <div class="entry">
-      <textarea id="comments" name="comments" placeholder=" "></textarea>
-      <label for="comments">comments</label>
+      <textarea id="message" name="message" placeholder=" "></textarea>
+      <label for="message">message</label>
     </div>
 
     <div class="buttons">
       <button class="btn cancel"><img src="./assets/Give_Feedback/cancel.png"></button>  <!-- this will need some javascript -->
       <button class="btn send"><img src="./assets/Give_Feedback/send.png"></button>  <!-- and this will need javascript and some backend -->
     </div>
+
+    <span class="loader"></span>
   </div>
 </body>
 </html>
