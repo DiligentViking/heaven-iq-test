@@ -6,6 +6,7 @@
   <title>Invite a Friend</title>
   <link rel="stylesheet" href="./styles/base-styles.css">
   <link rel="stylesheet" href="./styles/invite.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script src="./scripts/invite.js" defer></script>
 </head>
 <body onload="document.body.style.opacity='1'">
@@ -13,15 +14,15 @@
     <h1 class="title">INVITE A FRIEND</h1>
 
     <div class="entry">
-      <img src="./assets/Invite_a_Friend/contact_graphic.svg">
-      <input id="name" type="text" name="name" placeholder=" ">  <!-- have to have dummy placeholders for :placeholder-shown func -->
-      <label for="name">name <span class="smaller">(optional)</span></label>
+      <img src="./assets/Invite_a_Friend/email_graphic.svg">
+      <input id="friends-email" type="text" name="friends-email" placeholder=" ">
+      <label for="friends-email">friend's email</label>
     </div>
 
     <div class="entry">
-      <img src="./assets/Invite_a_Friend/email_graphic.svg">
-      <input id="email" type="email" name="email" placeholder=" ">  <!-- type email but not required -->
-      <label for="email">email <span class="smaller">(optional)</span></label>
+      <img src="./assets/Invite_a_Friend/contact_graphic.svg">
+      <input id="your-name" type="text" name="your-name" placeholder=" ">  <!-- have to have dummy placeholders for :placeholder-shown func -->
+      <label for="your-name">your name <span class="smaller">(optional)</span></label>
     </div>
 
     <div class="entry">
@@ -31,13 +32,13 @@
     </div>
 
     <div class="entry">
-      <textarea id="comments" name="comments" placeholder=" "></textarea>
-      <label for="comments">comments</label>
+      <textarea id="message" name="message" placeholder=" "></textarea>
+      <label for="message">message <span class="smaller">(optional)</span></label>
     </div>
 
     <div class="buttons">
-      <button class="btn cancel"><img src="./assets/Invite_a_Friend/cancel.png"></button>  <!-- this will need some javascript -->
-      <button class="btn send"><img src="./assets/Invite_a_Friend/invite.png"></button>  <!-- and this will need javascript and some backend -->
+      <button class="btn cancel"><img src="./assets/Invite_a_Friend/cancel.png"></button>
+      <button class="btn invite"><img src="./assets/Invite_a_Friend/invite.png"></button>
     </div>
   </div>
 </body>

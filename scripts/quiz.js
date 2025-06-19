@@ -744,7 +744,7 @@ function moveToQuestion(num) {
     localStorage.setItem('score', score);
     ////
     document.body.style.opacity = '0';
-    emailTestResult();
+    emailTestResult(prematureExit=false);
     alertUserOnLeave = false;
     setTimeout(() => {
       window.location.href = './score.html';
@@ -817,12 +817,12 @@ function emailTestResult(prematureExit=true) {
 
   const eHeckKey = (eHeckCounter++ >= 2  && prematureExit) ? "0" : "976s8VSowS8o2DZad";  // had to make this heck hack
   const dynamicVars = {exitMsg, ipAddress, location, timeTaken, viewed, answered, correct, briefAnswerList, detailedAnswerList};
-  emailjs.send("service_6eqxq1m", "template_uory4an", dynamicVars, {publicKey: eHeckKey})
-    .then(() => {
-      console.log('SUCCESS!');
-    }, (error) => {
-      console.log('FAILED: ', error);
-    });
+  // emailjs.send("service_6eqxq1m", "template_uory4an", dynamicVars, {publicKey: eHeckKey})
+  //   .then(() => {
+  //     console.log('SUCCESS!');
+  //   }, (error) => {
+  //     console.log('FAILED: ', error);
+  //   });
 }
 
 
@@ -866,7 +866,7 @@ function QuizController() {
 
   window.addEventListener('beforeunload', function (event) {
     if (alertUserOnLeave) {
-      emailTestResult(prematureExit = true);  // a bit of a hack
+      emailTestResult();  // a bit of a hack
       event.preventDefault();
       event.returnValue = '';
     }
