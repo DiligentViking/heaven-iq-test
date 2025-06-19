@@ -1,3 +1,14 @@
+let userInfo;
+async function getUserInfo() {
+  try {
+    const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+    userInfo = await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+getUserInfo().then(() => console.log('l received'));
+
 const btnCancel = document.querySelector('.cancel');
 const btnInvite = document.querySelector('.invite');
 
@@ -42,15 +53,17 @@ btnInvite.addEventListener('click', () => {
   emailjs.init({publicKey: '976s8VSowS8o2DZad'});
   /* An email for invitee, and an email for us */
   const inviteeEmail = emailjs.send("service_6eqxq1m", "template_97u8rsl", {toEmail, title, isInvite, content});
-  title = `Invite Friend sent by user (${'userIP'}) to ${toEmail}`;
+  const notForUser = true;
+  const location = `(${userInfo.ip}) ${userInfo.city}, ${userInfo.region}`;
+  title = `Invite Friend sent by user (${userInfo.city}) to ${toEmail}`;
   toEmail = 'feedback@heaveniqtest.com';
-  const trackerEmail = emailjs.send("service_6eqxq1m", "template_97u8rsl", {toEmail, title, isInvite, content});
+  const trackerEmail = emailjs.send("service_6eqxq1m", "template_97u8rsl", {notForUser, location, toEmail, title, isInvite, content,});
   Promise.all([inviteeEmail, trackerEmail])
     .then(() => {
       loader.remove();
       setTimeout(() => {  // to prevent alert from happening first (for some reason)
         alert('Invitation sent!');
-        // window.location.href = `./${referrer}.html`;  // consider changing to confirm() to say `...return to ${referrer} page?`
+        window.location.href = `./${referrer}.html`;  // consider changing to confirm() to say `...return to ${referrer} page?`
       }, 1000);
     }, (error) => {
       console.log(error);

@@ -525,6 +525,17 @@ const DISPLAY_DELAY = 0.4;
 const startTime = Date.now();
 let viewTime = Date.now();
 
+let userInfo;
+async function getUserInfo() {
+  try {
+    const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+    userInfo = await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+getUserInfo().then(() => console.log('l received'));
+
 let eHeckCounter = 0;
 
 const container = document.querySelector('.container');
@@ -773,14 +784,15 @@ function emailTestResult(prematureExit=true) {
   ////
   const numCorrect = theAnswers.reduce((acc, curr, index) => {return (curr === userAnswers[index]) ? acc + 1 : acc}, 0);
 
+  const title = `User (${userInfo.city}) test results`;
+  ////
   let exitMsg = (prematureExit)
     ? `User exited test on question ${questionNumber}.`
     : `User has completed the test with a score of ${localStorage.getItem('score')}!`;
   ////
-  const ipAddress = null;
-  const location = null;
-  ////
   const timeTaken = `${Math.round((Date.now() - startTime) / 1000 / 60)} minutes`;
+  ////
+  const location = `(${userInfo.ip}) ${userInfo.city}, ${userInfo.region}`
   ////
   const viewed = numQsViewed;
   const answered = numQsAnswered;
@@ -816,13 +828,13 @@ function emailTestResult(prematureExit=true) {
   const detailedAnswerList = detailedAnswerArr.join('\n');
 
   const eHeckKey = (eHeckCounter++ >= 2  && prematureExit) ? "0" : "976s8VSowS8o2DZad";  // had to make this heck hack
-  const dynamicVars = {exitMsg, ipAddress, location, timeTaken, viewed, answered, correct, briefAnswerList, detailedAnswerList};
-  // emailjs.send("service_6eqxq1m", "template_uory4an", dynamicVars, {publicKey: eHeckKey})
-  //   .then(() => {
-  //     console.log('SUCCESS!');
-  //   }, (error) => {
-  //     console.log('FAILED: ', error);
-  //   });
+  const dynamicVars = {title, exitMsg, location, timeTaken, viewed, answered, correct, briefAnswerList, detailedAnswerList};
+  emailjs.send("service_6eqxq1m", "template_uory4an", dynamicVars, {publicKey: eHeckKey})
+    .then(() => {
+      console.log('SUCCESS!');
+    }, (error) => {
+      console.log('FAILED: ', error);
+    });
 }
 
 

@@ -1,3 +1,14 @@
+let userInfo;
+async function getUserInfo() {
+  try {
+    const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
+    userInfo = await response.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+getUserInfo().then(() => console.log('l received'));
+
 const btnCancel = document.querySelector('.cancel');
 const btnSend = document.querySelector('.send');
 
@@ -19,12 +30,14 @@ btnSend.addEventListener('click', () => {
   loader.classList.add('loader');
   document.querySelector('.buttons').appendChild(loader);
   ////
+  const notForUser = true;
+  const location = `(${userInfo.ip}) ${userInfo.city}, ${userInfo.region}`;
   const toEmail = 'feedback@heaveniqtest.com';
-  const title = `Feedback from user ${name}`;  // consider putting user's ip there, too?
+  const title = `Feedback from user ${name} (${userInfo.city})`;  // consider putting user's ip there, too?
   const content = `FROM: ${name}\n\nEMAIL: ${email}\n\nMESSAGE: ${message}`;
   ////
   emailjs.init({publicKey: '976s8VSowS8o2DZad'});
-  emailjs.send("service_6eqxq1m", "template_97u8rsl", {toEmail, title, content})
+  emailjs.send("service_6eqxq1m", "template_97u8rsl", {notForUser, location, toEmail, title, content})
     .then(() => {
       loader.remove();
       setTimeout(() => {  // to prevent alert from happening first (for some reason)
