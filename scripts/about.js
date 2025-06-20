@@ -5,6 +5,6 @@ document.querySelector('.feedback').addEventListener('click', () => {
 
 document.querySelector('.back').addEventListener('click', () => {
   const prev_page = localStorage.getItem('prev-page');
-  const referrer = prev_page ? prev_page : 'index';
+  const referrer = (prev_page && prev_page !== 'about') ? prev_page : 'index';
   window.location.href = `./${referrer}.html`;
 });

@@ -95,7 +95,7 @@ const theQuestions = [
   {  // 6
     category: "JESUS",
     beforePart: "Complete the words of Jesus in Luke\u2019s Gospel (NAB):",
-    quotePart: ["He came to Jericho and intended to pass through the town. Now a man there named Zacchaeus, who was a chief tax collector and also a wealthy man, was seeking to see who Jesus was; but he could not see him because of the crowd, for he was short in stature. So he ran ahead and climbed a sycamore tree in order to see Jesus, who was about to pass that way. When he reached the place, Jesus looked up and said to him, \u201cZacchaeus, come down quickly, for today I must stay at your house.\u201d And he came down quickly and received him with joy. When they all saw this, they began to grumble, saying, \u201cHe has gone to stay at the house of a sinner.\u201d But Zacchaeus stood there and said to the Lord, \u201cBehold, half of my possessions, Lord, I shall give to the poor, and if I have extorted anything from anyone I shall repay it four times over.\u201d And Jesus said to him, \u201cToday Salvation has come to this house because this man too is a descendant of Abraham. For the Son of Man has come _____.\u201d",],
+    quotePart: ["He came to Jericho and intended to pass through the town. Now a man there named Zacchaeus, who was a chief tax collector and also a wealthy man, was seeking to see who Jesus was; but he could not see him because of the crowd, for he was short in stature. So he ran ahead and climbed a sycamore tree in order to see Jesus, who was about to pass that way. When he reached the place, Jesus looked up and said to him, \u201cZacchaeus, come down quickly, for today I must stay at your house.\u201d And he came down quickly and received him with joy. When they all saw this, they began to grumble, saying, \u201cHe has gone to stay at the house of a sinner.\u201d But Zacchaeus stood there and said to the Lord, \u201cBehold, half of my possessions, Lord, I shall give to the poor, and if I have extorted anything from anyone I shall repay it four times over.\u201d And Jesus said to him, \u201cToday salvation has come to this house because this man too is a descendant of Abraham. For the Son of Man has come _____.\u201d",],
     afterPart: "",
     choices: {
       a: "to preach the Gospel to all the house of Israel",
@@ -256,7 +256,7 @@ const theQuestions = [
     category: "JESUS",
     hellTheme: true,
     beforePart: "Read the following scripture passage from the Gospel of Matthew (NIV) where Jesus talks about judging the nations:",
-    quotePart: ["\u201cWhen the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\u201dThen the King will say to those on his right, \u2018Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...\u2019", "\u201cThen he will say to those on his left, \u2018Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\u2019\u201d"],
+    quotePart: ["\u201cWhen the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left.", "\u201cThen the King will say to those on his right, \u2018Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world...\u2019", "\u201cThen he will say to those on his left, \u2018Depart from me, you who are cursed, into the eternal fire prepared for the devil and his angels...\u2019\u201d"],
     afterPart: "Who does Jesus say are the sheep and the goats?",
     choices: {
       a: "The sheep are the ones who gave food, drink, clothes, welcome, and care to \u201cthe least of [Jesus\u2019] brothers and sisters,\u201d the goats are the ones who did not.",
@@ -769,7 +769,7 @@ function moveToQuestion(num) {
   currQ = theQuestions[num];
   userSelection = userAnswers[num];
   ////
-  questionTimes[num-1] = Math.round((Date.now() - viewTime) / 1000);
+  questionTimes[num-1] = (questionTimes[num-1] ? questionTimes[num-1] : 0) + Math.round((Date.now() - viewTime) / 1000);
   viewTime = Date.now();
   ////
   fadeElems(DISPLAY_DELAY)
