@@ -13,7 +13,7 @@ const btnCancel = document.querySelector('.cancel');
 const btnInvite = document.querySelector('.invite');
 
 const prev_page = localStorage.getItem('prev-page');
-const referrer = prev_page ? prev_page : 'about';
+const referrer = prev_page ? prev_page : 'index';
 
 const score = localStorage.getItem('score');
 if (score) document.querySelector('[for="include-score"]').append(`(${score})`);

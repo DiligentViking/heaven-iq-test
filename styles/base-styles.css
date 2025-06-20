@@ -53,7 +53,7 @@ body {
 .container {  /* background-image, height, padding must be specified in dedicated css file */
   background-size: cover;  /* this worked nicely */
 
-  min-width: 412px;  /* min prevents things from breaking too bad*/
+  width: 412px;  /* min prevents things from breaking too bad*/
   min-height: 100vh;
 
   display: flex;
@@ -66,6 +66,7 @@ body {
   color: var(--title-text-color);
   text-shadow: var(--title-text-shadow);
   font-weight: bold;
+  text-align: center;
 }
 
 
